@@ -244,7 +244,7 @@
     {
       "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\reproduction-notes.md",
       "path": "verification/acceptance-r2/reproduction-notes.md",
-      "sha256": "df793ddf4121e53fe7f146ea9e0d1f3ab07b88c510f896d43957c11df16bc575"
+      "sha256": "18eaa3838f298e917f78c4a306382f485b80db019a43726034311d232d7dfd52"
     },
     {
       "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\reviewed-spec.json",
@@ -315,9 +315,14 @@
       "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\spec.json",
       "path": "verification/recorded-runtime-r1/spec.json",
       "sha256": "2e1319540944394bf2d6fff6cb4b2ac6447b7470e1d0d9556d7370d2fa1b2618"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\metadata-correction-runtime-r1\\correction.json",
+      "path": "metadata-correction-runtime-r1/correction.json",
+      "sha256": "ceffd237167c16f9c89bd815f9f331d6bc98b4d0517d92256f30ae8c238594df"
     }
   ],
-  "reproduction_readme": "Windows Python 3.13; no container or external runtime service. Network is needed only to obtain source/dependencies. Use the exact frozen product commit linked in snapshot-proof.json, not the source URL in the raw pip freeze editable record. Create a venv, install verification/acceptance-r2/runtime-requirements.txt, then pip install --no-deps -e . from the product root. PYTHONPATH must put the frozen product root before other checkouts. Verify signxml.__file__ points there.\n\nFrom product root, run python -B -m pytest -q -o addopts= -p no:cacheprovider --tb=short verification/acceptance-r2/test_xml_binding.py verification/acceptance-r2/test_xml_references.py verification/acceptance-r2/test_xml_contract.py -k \"not test_duplicate_id_is_rejected[ID]\". This filter excludes two spelling parameters; same-spelling duplicate Id rejection is covered by test/test.py::TestExpectedSignedElement::test_duplicate_ids_are_rejected. Mixed Id/ID retains legacy precedence but cannot authenticate the unsigned shadow. See acceptance-contract-review.json; the stricter initial failure is preserved and excluded from scoring.\n\nRun python -B -m pytest -q -o addopts= -p no:cacheprovider test/test.py::TestExpectedSignedElement, then test/test.py for 75 tests and 169 subtests. The two non-positive certificate serial deprecation warnings belong to legacy fixtures. This is the complete explicitly selected main module, not a claim that every test in every file ran. Run python -B verification/acceptance-r2/xml-demo.py for freshly signed invoices. Generated private keys stay in memory. All command argv, logs, import locations and frozen hashes are retained. The demonstration is a separate verification helper, not a model-authored UI.",
+  "reproduction_readme": "Windows Python 3.14.3; no container or external runtime service. Network is needed only to obtain source/dependencies. Use the exact frozen product commit linked in snapshot-proof.json, not the source URL in the raw pip freeze editable record. Create a venv, install verification/acceptance-r2/runtime-requirements.txt, then pip install --no-deps -e . from the product root. PYTHONPATH must put the frozen product root before other checkouts. Verify signxml.__file__ points there.\n\nFrom product root, run python -B -m pytest -q -o addopts= -p no:cacheprovider --tb=short verification/acceptance-r2/test_xml_binding.py verification/acceptance-r2/test_xml_references.py verification/acceptance-r2/test_xml_contract.py -k \"not test_duplicate_id_is_rejected[ID]\". This filter excludes two spelling parameters; same-spelling duplicate Id rejection is covered by test/test.py::TestExpectedSignedElement::test_duplicate_ids_are_rejected. Mixed Id/ID retains legacy precedence but cannot authenticate the unsigned shadow. See acceptance-contract-review.json; the stricter initial failure is preserved and excluded from scoring.\n\nRun python -B -m pytest -q -o addopts= -p no:cacheprovider test/test.py::TestExpectedSignedElement, then test/test.py for 75 tests and 169 subtests. The two non-positive certificate serial deprecation warnings belong to legacy fixtures. This is the complete explicitly selected main module, not a claim that every test in every file ran. Run python -B verification/acceptance-r2/xml-demo.py for freshly signed invoices. Generated private keys stay in memory. All command argv, logs, import locations and frozen hashes are retained. The demonstration is a separate verification helper, not a model-authored UI.",
   "no_model_source_edits": true,
   "native_trace_included": false
 }
