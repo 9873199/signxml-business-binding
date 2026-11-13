@@ -109,6 +109,8 @@ class SignatureConfiguration:
 
 _DEFAULT_SIGNATURE_CONFIG = SignatureConfiguration()
 
+_C14N_ALGORITHM_URIS = frozenset(method.value for method in CanonicalizationMethod)
+
 
 @dataclass(frozen=True)
 class VerifyResult:
@@ -386,6 +388,7 @@ class XMLVerifier(XMLSignatureProcessor):
         parser=None,
         uri_resolver: Callable | None = None,
         id_attribute: str | None = None,
+        expected_signed_element: etree._Element | None = None,
         expect_config: SignatureConfiguration = _DEFAULT_SIGNATURE_CONFIG,
         ee_policy: x509.verification.ExtensionPolicy | None = None,
         ca_policy: x509.verification.ExtensionPolicy | None = None,
@@ -476,6 +479,26 @@ class XMLVerifier(XMLSignatureProcessor):
             and is expected to return a :class:`lxml.etree._Element` node or bytes.
         :param id_attribute:
             Name of the attribute whose value ``URI`` refers to. By default, SignXML will search for "Id", then "ID".
+        :param expected_signed_element:
+            Optional element object, selected from the same lxml tree passed as **data**, that the caller intends to
+            process after verification. When set, ``verify()`` additionally proves, before returning, that at least
+            one cryptographically verified same-document ``Reference`` covers this exact element object (by identity,
+            not by tag, text, or serialization equality), and raises :class:`InvalidSignature` if it does not. This
+            protects against signature wrapping attacks, where a validly signed node is relocated and the application
+            is tricked into processing an unsigned look-alike node elsewhere in the document.
+
+            The element is considered covered if a verified reference targets the element itself or one of its
+            ancestors, provided the reference transforms are limited to enveloped-signature and canonicalization
+            transforms (whose effect on the node set is fully understood, so containment in the digested subtree is
+            provable) and the element is not excised by the enveloped-signature transform. References using any other
+            transform (such as base64), references resolved through **uri_resolver** (external content can never vouch
+            for a node in the input tree), and references to unrelated or descendant nodes do not count as coverage.
+
+            Because coverage is established by object identity within the verified tree, **data** must be passed as an
+            lxml element and **expected_signed_element** must be an element within that same tree; otherwise
+            :class:`InvalidInput` is raised. Select the element from the tree *before* calling ``verify()`` (e.g. via
+            ``root.find(...)`` or ``root.xpath(...)``), pass both to ``verify()``, and afterwards process only the
+            element you passed in - do not look it up again in the document.
         :param expect_config:
             Expected signature configuration. Pass a :class:`SignatureConfiguration` object to describe expected
             properties of the verified signature. Signatures with unexpected configurations will fail validation.
@@ -522,6 +545,10 @@ class XMLVerifier(XMLSignatureProcessor):
         root = self.get_root(data)
         self._reject_manifests(root)
         signature_ref = self._get_signature(root)
+
+        expected_element_path = None
+        if expected_signed_element is not None:
+            expected_element_path = self._get_expected_element_path(data, expected_signed_element)
 
         # We could do a deep copy here, but it wouldn't preserve root level namespaces
         signature = self._fromstring(self._tostring(signature_ref))
@@ -656,24 +683,117 @@ class XMLVerifier(XMLSignatureProcessor):
         verified_signed_info = self._fromstring(verified_signed_info_c14n)
         verify_results: list[VerifyResult] = []
         references = self._findall(verified_signed_info, "Reference")
+        expected_element_covered = False
         for idx, reference in enumerate(references):
             # get_root() already isolated the input; multiple references need independent trees for their transforms.
             root_to_verify = self._fromstring(self._tostring(root)) if len(references) > 1 else root
-            verify_results.append(
-                self._verify_reference(
-                    reference, idx, root_to_verify, uri_resolver, c14n_algorithm, signature, key_used
-                )
+            expected_element = None
+            if expected_element_path is not None:
+                expected_element = self._resolve_element_path(root_to_verify, expected_element_path)
+            verify_result, reference_covers_expected_element = self._verify_reference(
+                reference,
+                idx,
+                root_to_verify,
+                uri_resolver,
+                c14n_algorithm,
+                signature,
+                key_used,
+                expected_element=expected_element,
             )
+            verify_results.append(verify_result)
+            expected_element_covered = expected_element_covered or reference_covers_expected_element
 
         if type(self.config.expect_references) is int and len(verify_results) != self.config.expect_references:
             msg = "Expected to find {} references, but found {}"
             raise InvalidSignature(msg.format(self.config.expect_references, len(verify_results)))
+
+        if expected_element_path is not None and not expected_element_covered:
+            raise InvalidSignature(
+                "The signature is valid, but the expected_signed_element is not covered by any verified "
+                "same-document reference. The element may be an unsigned look-alike (signature wrapping attack), "
+                "or the references covering it use transforms or external URIs through which coverage cannot be "
+                "proven. Only process elements that verify() has confirmed to be signed."
+            )
 
         return (
             verify_results[0]
             if type(self.config.expect_references) is int and self.config.expect_references == 1
             else verify_results
         )
+
+    def _get_expected_element_path(self, data, element):
+        """
+        Compute the positional path of **element** relative to **data**, verifying by object identity that the
+        element belongs to the exact tree the caller passed in. Elements from other trees (including look-alike
+        copies with identical tag, text, or serialization) are rejected.
+        """
+        if not isinstance(element, etree._Element) or not isinstance(element.tag, str):
+            raise InvalidInput("expected_signed_element must be an lxml element")
+        if not isinstance(data, etree._Element):
+            raise InvalidInput(
+                "expected_signed_element requires data to be passed as an lxml element, so that the element "
+                "can be matched by identity against the verified tree"
+            )
+        path = []
+        node = element
+        while node is not data:
+            parent = node.getparent()
+            if parent is None:
+                raise InvalidInput(
+                    "expected_signed_element is not part of the input document tree; pass the exact element "
+                    "object selected from the tree given as data"
+                )
+            position = sum(1 for sibling in node.itersiblings(preceding=True) if sibling.tag == node.tag)
+            path.append((node.tag, position))
+            node = parent
+        path.reverse()
+        return path
+
+    def _resolve_element_path(self, root, path):
+        node = root
+        for tag, position in path:
+            matches = [child for child in node if child.tag == tag]
+            node = matches[position]
+        return node
+
+    def _check_expected_element_coverage(self, reference, payload, transforms_node, expected_element, signature_ref):
+        """
+        Determine whether a verified reference proves that **expected_element** (a node in the same tree as the
+        resolved **payload**) was part of the digested content. Only same-document references whose transforms
+        have fully understood node-set semantics (enveloped signature and canonicalization) can prove coverage;
+        anything else is treated as no coverage rather than guessed.
+        """
+        if expected_element is None:
+            return False
+        uri = reference.get("URI")
+        if uri is None or not (uri == "" or uri.startswith("#")):
+            # Content resolved through an external URI can never vouch for a node in the input tree.
+            return False
+        if not isinstance(payload, etree._Element):
+            return False
+        if payload.getroottree().getroot() is not expected_element.getroottree().getroot():
+            return False
+        if payload is not expected_element and payload not in expected_element.iterancestors():
+            # The reference targets a node that does not contain the expected element.
+            return False
+        enveloped = False
+        if transforms_node is not None:
+            for transform in self._findall(transforms_node, "Transform"):
+                algorithm = transform.get("Algorithm")
+                if algorithm == SignatureConstructionMethod.enveloped.value:
+                    enveloped = True
+                elif algorithm in _C14N_ALGORITHM_URIS:
+                    continue
+                else:
+                    # Transforms such as base64 (or XPath/XSLT, rejected elsewhere) produce derived octets
+                    # rather than a provable subset of the tree, so containment cannot be proven.
+                    return False
+        if enveloped and (
+            expected_element is signature_ref or signature_ref in expected_element.iterancestors()
+        ):
+            # The enveloped-signature transform excises the signature element from the digested node set.
+            return False
+        return True
 
     def _verify_reference(
         self,
@@ -684,6 +804,7 @@ class XMLVerifier(XMLSignatureProcessor):
         c14n_algorithm,
         signature,
         signature_key_used,
+        expected_element=None,
     ):
         signature_ref = self._get_signature(root)
         transforms = self._find(reference, "Transforms", require=False)
@@ -720,7 +841,13 @@ class XMLVerifier(XMLSignatureProcessor):
             signature_key = signature_key_used
         else:
             signature_key = signature_key_used.public_bytes(Encoding.PEM, PublicFormat.SubjectPublicKeyInfo)
-        return VerifyResult(payload_c14n, payload_c14n_xml, signature, signature_key=signature_key)
+        reference_covers_expected_element = self._check_expected_element_coverage(
+            reference, payload, transforms, expected_element, signature_ref
+        )
+        return (
+            VerifyResult(payload_c14n, payload_c14n_xml, signature, signature_key=signature_key),
+            reference_covers_expected_element,
+        )
 
     def validate_schema(self, signature):
         last_exception = None

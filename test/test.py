@@ -46,7 +46,7 @@ from signxml import (
     namespaces,
     processor,
 )
-from signxml.util import ds_tag
+from signxml.util import ds_tag, long_to_bytes
 from signxml.xades import (
     XAdESDataObjectFormat,
     XAdESSignatureConfiguration,
@@ -1803,6 +1803,217 @@ class TestExternalSigning(unittest.TestCase):
         key = ExternalSigningKey(public_key=self.ec_key.public_key(), signer=lambda request: b"not DER")
         with self.assertRaises(InvalidSignature):
             XMLSigner(signature_algorithm=SignatureMethod.ECDSA_SHA256).sign(etree.fromstring(b"<Test/>"), key=key)
+
+
+class TestExpectedSignedElement(unittest.TestCase):
+    """
+    Tests for XMLVerifier.verify(expected_signed_element=...).
+
+    The recommended caller pattern is: select the node you intend to process from the exact tree
+    you pass to verify(), pass it as expected_signed_element, and afterwards process only that
+    node object. Never re-run an unconstrained XPath lookup on the document (or on the verify()
+    result) to "find" the node again - that is exactly the gap signature wrapping attacks exploit:
+
+        order = signed_doc.find("Order")
+        XMLVerifier().verify(signed_doc, expected_signed_element=order, expect_config=config)
+        process(order)  # the same object verify() proved to be covered by a verified reference
+    """
+
+    ORDERS_XML = (
+        '<Orders>'
+        '<Order Id="order-1"><Item>widget</Item><Amount>100</Amount></Order>'
+        '<Order Id="order-2"><Item>gadget</Item><Amount>200</Amount></Order>'
+        '</Orders>'
+    )
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rsa_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+
+    def setUp(self):
+        self.config = SignatureConfiguration(require_x509=False)
+        self.signer = XMLSigner(
+            signature_algorithm=SignatureMethod.RSA_SHA256, digest_algorithm=DigestAlgorithm.SHA256
+        )
+
+    def _build_signature(self, reference_uri, transforms, digest_b64):
+        """Hand-craft a ds:Signature element with a real RSA signature over SignedInfo."""
+        signature = etree.Element(ds_tag("Signature"), nsmap={"ds": namespaces.ds})
+        signed_info = etree.SubElement(signature, ds_tag("SignedInfo"))
+        etree.SubElement(
+            signed_info,
+            ds_tag("CanonicalizationMethod"),
+            Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        )
+        etree.SubElement(signed_info, ds_tag("SignatureMethod"), Algorithm=SignatureMethod.RSA_SHA256.value)
+        reference = etree.SubElement(signed_info, ds_tag("Reference"), URI=reference_uri)
+        if transforms:
+            transforms_node = etree.SubElement(reference, ds_tag("Transforms"))
+            for algorithm in transforms:
+                etree.SubElement(transforms_node, ds_tag("Transform"), Algorithm=algorithm)
+        etree.SubElement(reference, ds_tag("DigestMethod"), Algorithm=DigestAlgorithm.SHA256.value)
+        etree.SubElement(reference, ds_tag("DigestValue")).text = digest_b64
+        signed_info_c14n = etree.tostring(etree.fromstring(etree.tostring(signed_info)), method="c14n")
+        signature_value = self.rsa_key.sign(signed_info_c14n, padding.PKCS1v15(), hashes.SHA256())
+        etree.SubElement(signature, ds_tag("SignatureValue")).text = b64encode(signature_value).decode()
+        key_info = etree.SubElement(signature, ds_tag("KeyInfo"))
+        key_value = etree.SubElement(key_info, ds_tag("KeyValue"))
+        rsa_key_value = etree.SubElement(key_value, ds_tag("RSAKeyValue"))
+        public_numbers = self.rsa_key.public_key().public_numbers()
+        etree.SubElement(rsa_key_value, ds_tag("Modulus")).text = b64encode(long_to_bytes(public_numbers.n)).decode()
+        etree.SubElement(rsa_key_value, ds_tag("Exponent")).text = b64encode(long_to_bytes(public_numbers.e)).decode()
+        return signature
+
+    def test_selected_signed_element_is_confirmed(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        order = signed.find("Order")
+        self.assertEqual(order.get("Id"), "order-1")
+        result = XMLVerifier().verify(signed, expected_signed_element=order, expect_config=self.config)
+        self.assertIsInstance(result, VerifyResult)
+        self.assertEqual(result.signed_xml.get("Id"), "order-1")
+        # Omitting the parameter keeps the legacy return form and verification rules.
+        legacy_result = XMLVerifier().verify(signed, expect_config=self.config)
+        self.assertIsInstance(legacy_result, VerifyResult)
+        self.assertEqual(legacy_result.signed_data, result.signed_data)
+
+    def test_signature_wrapping_attack_is_rejected(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        # Attacker moves the validly signed subtree into a wrapper and plants an unsigned
+        # look-alike order where the business code's lookup will find it.
+        forged = etree.fromstring('<Orders><Order><Item>widget</Item><Amount>1</Amount></Order><Wrapper/></Orders>')
+        forged.find("Wrapper").append(signed)
+        evil_order = forged.find("Order")
+        # The cryptography alone is satisfied: the relocated signature still verifies.
+        result = XMLVerifier().verify(forged, expect_config=self.config)
+        self.assertEqual(result.signed_xml.get("Id"), "order-1")
+        # But the node the business code would process is not the node that was signed.
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(forged, expected_signed_element=evil_order, expect_config=self.config)
+        # The genuinely signed node, selected from the same tree, is confirmed instead.
+        signed_order = forged.find("Wrapper/Orders/Order")
+        self.assertEqual(signed_order.get("Id"), "order-1")
+        XMLVerifier().verify(forged, expected_signed_element=signed_order, expect_config=self.config)
+
+    def test_ancestor_reference_covers_descendant_element(self):
+        root = etree.fromstring(self.ORDERS_XML.replace("<Orders>", '<Orders Id="all-orders">'))
+        signed = self.signer.sign(root, key=self.rsa_key, reference_uri="all-orders")
+        order = signed.find("Order")
+        result = XMLVerifier().verify(signed, expected_signed_element=order, expect_config=self.config)
+        self.assertEqual(result.signed_xml.get("Id"), "all-orders")
+
+    def test_reference_to_child_does_not_protect_ancestor(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(signed, expected_signed_element=signed, expect_config=self.config)
+
+    def test_unsigned_sibling_is_rejected(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        order_2 = signed.find("Order[2]")
+        self.assertEqual(order_2.get("Id"), "order-2")
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(signed, expected_signed_element=order_2, expect_config=self.config)
+
+    def test_multiple_references(self):
+        signed = self.signer.sign(
+            etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri=["order-1", "order-2"]
+        )
+        config = replace(self.config, expect_references=2)
+        order_2 = signed.find("Order[2]")
+        results = XMLVerifier().verify(signed, expected_signed_element=order_2, expect_config=config)
+        self.assertEqual(len(results), 2)
+        self.assertEqual({r.signed_xml.get("Id") for r in results}, {"order-1", "order-2"})
+        # An unsigned order added after signing is covered by no reference: verification fails
+        # with an exception, so no partially trusted VerifyResult list can leak to the caller.
+        etree.SubElement(signed, "Order", Id="order-3")
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(signed, expected_signed_element=signed.find("Order[3]"), expect_config=config)
+        # Without the parameter, the same document still verifies fine.
+        XMLVerifier().verify(signed, expect_config=config)
+
+    def test_multiple_signatures_only_the_verified_one_counts(self):
+        root = etree.fromstring(self.ORDERS_XML)
+        root.find("Order").append(etree.Element(ds_tag("Signature"), Id="placeholder"))
+        signed = self.signer.sign(root, key=self.rsa_key, reference_uri="order-1")
+        signed.find("Order[2]").append(etree.Element(ds_tag("Signature"), Id="placeholder"))
+        signed = self.signer.sign(signed, key=self.rsa_key, reference_uri="order-2")
+        # The default configuration verifies the first signature found (enveloped in order-1).
+        XMLVerifier().verify(signed, expected_signed_element=signed.find("Order"), expect_config=self.config)
+        # order-2 is signed too, but not by the signature this verification checked.
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(signed, expected_signed_element=signed.find("Order[2]"), expect_config=self.config)
+        # Pointing the verifier at the second signature confirms order-2 as expected.
+        config = replace(self.config, location="./Order[2]/")
+        XMLVerifier().verify(signed, expected_signed_element=signed.find("Order[2]"), expect_config=config)
+
+    def test_duplicate_ids_are_rejected(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        etree.SubElement(signed, "Order", Id="order-1")  # duplicate Id injected after signing
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(signed, expected_signed_element=signed.find("Order[3]"), expect_config=self.config)
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(signed, expect_config=self.config)
+
+    def test_namespaced_id_attribute(self):
+        root = etree.fromstring('<Orders><Order xml:id="order-xml"><Item>widget</Item></Order></Orders>')
+        signed = self.signer.sign(root, key=self.rsa_key, reference_uri="order-xml")
+        order = signed.find("Order")
+        result = XMLVerifier().verify(signed, expected_signed_element=order, expect_config=self.config)
+        self.assertEqual(result.signed_xml.get("{http://www.w3.org/XML/1998/namespace}id"), "order-xml")
+
+    def test_element_from_other_tree_is_rejected(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        lookalike = etree.fromstring(etree.tostring(signed)).find("Order")
+        # Identical tag, text, and serialization - but not the same tree, so not accepted.
+        self.assertEqual(etree.tostring(lookalike), etree.tostring(signed.find("Order")))
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(signed, expected_signed_element=lookalike, expect_config=self.config)
+        detached = etree.fromstring('<Order Id="order-1"/>')
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(signed, expected_signed_element=detached, expect_config=self.config)
+
+    def test_non_element_input_and_non_lxml_data_are_rejected(self):
+        signed = self.signer.sign(etree.fromstring(self.ORDERS_XML), key=self.rsa_key, reference_uri="order-1")
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(signed, expected_signed_element="order-1", expect_config=self.config)
+        order = signed.find("Order")
+        with self.assertRaises(InvalidInput):
+            XMLVerifier().verify(etree.tostring(signed), expected_signed_element=order, expect_config=self.config)
+
+    def test_base64_transform_cannot_prove_coverage(self):
+        inner = b"<Order><Item>widget</Item></Order>"
+        root = etree.fromstring(b"<Orders><Order Id=\"order-1\">" + b64encode(inner) + b"</Order></Orders>")
+        signature = self._build_signature(
+            reference_uri="#order-1",
+            transforms=["http://www.w3.org/2000/09/xmldsig#base64"],
+            digest_b64=b64encode(hashlib.sha256(inner).digest()).decode(),
+        )
+        root.append(signature)
+        # The signature is cryptographically valid over the decoded octets ...
+        result = XMLVerifier().verify(root, expect_config=self.config)
+        self.assertEqual(result.signed_data, inner)
+        # ... but containment of the tree node in the digested content cannot be proven through
+        # a base64 transform, so the coverage claim is refused rather than guessed.
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(root, expected_signed_element=root.find("Order"), expect_config=self.config)
+
+    def test_external_uri_cannot_vouch_for_tree_node(self):
+        order_bytes = b'<Order Id="order-1"><Item>widget</Item></Order>'
+        root = etree.fromstring(b"<Orders>" + order_bytes + b"</Orders>")
+        signature = self._build_signature(
+            reference_uri="https://example.test/order-1.xml",
+            transforms=[],
+            digest_b64=b64encode(hashlib.sha256(order_bytes).digest()).decode(),
+        )
+        root.append(signature)
+        resolver = Mock(return_value=order_bytes)
+        # The detached signature verifies against the externally resolved content ...
+        result = XMLVerifier().verify(root, uri_resolver=resolver, expect_config=self.config)
+        self.assertEqual(result.signed_data, order_bytes)
+        # ... but byte-identical external content can never vouch for the node in the input tree.
+        with self.assertRaises(InvalidSignature):
+            XMLVerifier().verify(
+                root, uri_resolver=resolver, expected_signed_element=root.find("Order"), expect_config=self.config
+            )
 
 
 class TestXAdES(unittest.TestCase, LoadExampleKeys):

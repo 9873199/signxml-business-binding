@@ -1,3 +1,10 @@
+Unreleased
+==========
+
+-  Add ``expected_signed_element`` parameter to ``XMLVerifier.verify()`` to confirm, by object
+   identity within the verified tree, that the element the caller intends to process is covered
+   by a verified same-document reference (protection against signature wrapping attacks)
+
 Changes for v5.3.0 (2026-11-11)
 ===============================
 
