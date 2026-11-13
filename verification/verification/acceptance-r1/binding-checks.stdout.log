@@ -1,0 +1,10 @@
+..............F....                                                      [100%]
+================================== FAILURES ===================================
+______________________ test_duplicate_id_is_rejected[ID] ______________________
+..\test_xml_binding.py:87: in test_duplicate_id_is_rejected
+    with pytest.raises((InvalidInput,InvalidSignature)):verify(root,node,configured=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE any of (InvalidInput, InvalidSignature)
+=========================== short test summary info ===========================
+FAILED ..\test_xml_binding.py::test_duplicate_id_is_rejected[ID] - Failed: DI...
+1 failed, 18 passed in 1.51s

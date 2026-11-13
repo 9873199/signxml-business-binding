@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-13T15:49:54+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\tasks\\xml\\env\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-o",
+    "addopts=",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short",
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2/test_xml_binding.py",
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2/test_xml_references.py",
+    "--basetemp",
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2/tmp-binding",
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2/test_xml_contract.py",
+    "-k",
+    "not test_duplicate_id_is_rejected[ID]"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\replay-source",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\binding-checks.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\binding-checks.stderr.log"
+}

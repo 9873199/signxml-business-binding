@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-13T15:47:15+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\tasks\\xml\\env\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pip",
+    "freeze"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-source",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\dependency-lock.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\dependency-lock.stderr.log"
+}

@@ -1,0 +1,21 @@
+{
+  "independent_binding": {
+    "passed": 19,
+    "deselected": 2,
+    "failed": 0
+  },
+  "model_feature_rerun": {
+    "passed": 13,
+    "failed": 0
+  },
+  "main_module_compatibility": {
+    "passed": 75,
+    "subtests_passed": 169,
+    "warnings": 2
+  },
+  "initial_stricter_fixture": {
+    "failed": 1,
+    "not_counted_as_product_failure": true
+  },
+  "counts_not_summed_due_to_overlap": true
+}

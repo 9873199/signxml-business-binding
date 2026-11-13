@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-13T15:47:11+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\tasks\\xml\\env\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import importlib,json,sys;names=json.loads(sys.argv[1]);print(json.dumps({\"python\":sys.version,\"executable\":sys.executable,\"modules\":{n:importlib.import_module(n).__file__ for n in names}}))",
+    "[\"signxml\", \"signxml.verifier\"]"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-source",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\actual-import.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\actual-import.stderr.log"
+}

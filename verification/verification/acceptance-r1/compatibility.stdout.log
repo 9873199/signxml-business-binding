@@ -1,0 +1,10 @@
+............................................... [ 62%]
+............................                                             [100%]
+============================== warnings summary ===============================
+test/test.py::TestSignXML::test_x509_certs
+test/test.py::TestSignXML::test_xmldsig_interop
+  D:\hc\userFeedback\cache\execution-security-new11-20261112\evaluation\uf-20261112-new15-xml-retry-2\verification\acceptance-r1\replay-source\signxml\util\__init__.py:269: CryptographyDeprecationWarning: Parsed a serial number which wasn't positive (i.e., it was negative or zero), which is disallowed by RFC 5280. Loading this certificate will cause an exception in a future release of cryptography.
+    certs = x509.load_pem_x509_certificates(pems.read())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+75 passed, 2 warnings, 169 subtests passed in 66.82s (0:01:06)

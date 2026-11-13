@@ -1,0 +1,57 @@
+{
+  "process": [
+    {
+      "native_lines": [
+        139,
+        140,
+        144,
+        147,
+        148,
+        152,
+        155,
+        158
+      ],
+      "fact": "Initial implementation errors and successful same-turn corrections are visible; no continuation was used."
+    },
+    {
+      "native_lines": [
+        162,
+        163,
+        208,
+        209,
+        216,
+        217
+      ],
+      "fact": "Main-module compatibility, signature-internal exclusion and empty-URI coverage were actually tested."
+    }
+  ],
+  "requirement_mapping": {
+    "identity_and_wrapping": [
+      "test_xml_binding.py",
+      "test_xml_contract.py",
+      "test/test.py::TestExpectedSignedElement"
+    ],
+    "references_and_external": [
+      "test_xml_references.py",
+      "test/test.py::TestExpectedSignedElement"
+    ],
+    "transforms": [
+      "test_xml_binding.py::test_enveloped_signature_removed_content_is_not_covered",
+      "test/test.py::TestExpectedSignedElement::test_base64_transform_cannot_prove_coverage"
+    ],
+    "no_partial_results": [
+      "test_xml_contract.py::test_one_valid_reference_does_not_return_when_another_digest_fails"
+    ],
+    "compatibility": [
+      "compatibility.json",
+      "compatibility.stdout.log"
+    ]
+  },
+  "contract_correction": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\acceptance-contract-review.json",
+  "diversity_evidence": "D:\\hc\\userFeedback\\cache\\prompts-security15-20261112-r1\\continuation-r1\\diversity-rechecked.json",
+  "time": "2026-11-13T16:00:46+08:00",
+  "uid": 1742,
+  "frozen_commit": "163f81e3d8baf50adf20b19da1014656d352eb52",
+  "native_trace_sha256": "88ba5f9e7bb847f2a6972b5bf2f30ae3e8ace46e5560a4b7390820d2424b01c8",
+  "no_model_source_changes_after_freeze": true
+}

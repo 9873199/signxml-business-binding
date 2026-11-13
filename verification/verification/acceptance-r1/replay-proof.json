@@ -1,0 +1,37 @@
+{
+  "time": "2026-11-13T15:48:36+08:00",
+  "uid": 1742,
+  "run_id": "uf-20261112-new15-xml-retry-2",
+  "actual": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\tasks\\xml\\env\\Scripts\\python.exe",
+    "modules": {
+      "signxml": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-source\\signxml\\__init__.py",
+      "signxml.verifier": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-source\\signxml\\verifier.py"
+    }
+  },
+  "replay_source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-source",
+  "frozen_hashes_unchanged": true,
+  "replay_source_hashes_unchanged": true,
+  "dependency_environment": "Reused the task dependency environment; exact pip freeze retained",
+  "commands": [
+    {
+      "name": "binding-checks",
+      "exit_code": 1
+    },
+    {
+      "name": "model-feature-tests",
+      "exit_code": 0
+    },
+    {
+      "name": "compatibility",
+      "exit_code": 0
+    },
+    {
+      "name": "runtime-demo",
+      "exit_code": 0
+    }
+  ],
+  "score": null,
+  "semantic_review": "PENDING"
+}

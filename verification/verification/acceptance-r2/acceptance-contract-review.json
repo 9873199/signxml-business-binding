@@ -1,0 +1,9 @@
+{
+  "reviewer": "Codex primary reviewer",
+  "time": "2026-11-13T15:49:46+08:00",
+  "retained_initial_output": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\binding-checks.json",
+  "excluded_test": "test_duplicate_id_is_rejected[ID]",
+  "reason": "The request requires clear duplicate-ID results and compatibility of previous verification rules, rather than rejecting every mixture of differently named ID attributes. The unchanged resolver intentionally prefers Id before ID. The original fixture imposed stronger rejection than the prompt. No model penalty. Revision 2 checks deterministic legacy resolution and separately refuses coverage for the unsigned ID shadow; same-spelling ambiguous duplicate Id is still required to fail.",
+  "model_source_changes": false,
+  "selection_note": "pytest -k is case-insensitive, therefore both [Id] and [ID] parameters were deselected (2 total). Same-spelling duplicate Id rejection was independently exercised by the unchanged model-feature test test_duplicate_ids_are_rejected, whose source and 13-passed output are retained. The other 19 independent checks include mixed-spelling shadow coverage refusal."
+}

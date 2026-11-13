@@ -1,0 +1,15 @@
+
+A signed invoice selected from the input tree
+Selected element: Invoice
+Verified reference: <Invoice Id="order"><Amount>42</Amount></Invoice>
+
+A valid signature remains in the archive
+Cryptographically signed amount: 42
+
+Selecting the replacement business invoice
+Selected element: Invoice
+InvalidSignature: The signature is valid, but the expected_signed_element is not covered by any verified same-document reference. The element may be an unsigned look-alike (signature wrapping attack), or the references covering it use transforms or external URIs through which coverage cannot be proven. Only process elements that verify() has confirmed to be signed.
+
+Selecting an intact descendant of a signed envelope
+Selected element: Invoice
+Verified reference: <Envelope Id="root"><Invoice><Amount>42</Amount></Invoice></Envelope>

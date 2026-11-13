@@ -1,0 +1,23 @@
+完成。全部 75 个测试（含新增 13 个）通过，原有行为不变。
+
+## 实现（`signxml/verifier.py`）
+
+`XMLVerifier.verify()` 新增可选参数 `expected_signed_element`，语义是**按对象身份**回答“你要处理的这个节点是否就是验过的内容”：
+
+- **身份绑定**（`_get_expected_element_path`，verifier.py:724）：从调用者传入的那个 lxml 元素沿 `getparent()` 向上走，必须能走到 `data` 本身——同一棵树里的同一个对象才接受；tag/文本/序列化相同的另一棵树副本、脱离文档的元素、非 lxml 输入、`data` 为 str/bytes 都抛 `InvalidInput`。内部验证在序列化副本上进行，因此先算出元素的位置路径，再映射进每个 Reference 各自的工作树（多 Reference 时每条引用有独立副本）。
+- **覆盖证明**（`_check_expected_element_coverage`，verifier.py:759）：某条**已验真**的同文档 Reference（`URI=""` 或 `#id`）满足——解析目标就是该元素或其祖先；transform 仅限 enveloped-signature 和规范化（这两类对节点集的影响完全可知）；若含 enveloped 转换，元素不得位于被剔除的 `ds:Signature` 内。base64 等派生字节的转换、外部 URI 解析的内容（字节相同也不背书）、指向子孙或无关节点的引用，一律不计入覆盖，不猜测。
+- **失败不泄漏部分结果**：所有 Reference 验完后、return 之前统一检查，未覆盖则抛 `InvalidSignature`，调用者拿不到任何 `VerifyResult`。未传参数时返回形式和验签规则完全不变（XAdES 经 `**kwargs` 透传，同样兼容）。
+
+## 测试（`test/test.py` 的 `TestExpectedSignedElement`，运行时生成 RSA-2048 密钥真实签名）
+
+- **正常订单**：选中已签 `Order` → 验签通过且确认受保护；同时断言省略参数时返回形式不变。
+- **包装攻击**：已签子树被搬进 `<Wrapper>`，业务位置放上未签的同名 `<Order>`——签名密码学上**仍然有效**（单独断言了这一点），但对业务会选到的那个节点抛 `InvalidSignature`；选中包装层里的真节点则通过。
+- **祖先引用**：引用带 Id 的根，后代 `Order` 确认受保护；反向（引用子节点）不保护祖先。
+- **多 Reference**：`expect_references=2` 时第二条引用覆盖 `order-2`；签名后注入的 `order-3` 抛错且无部分结果返回。
+- **多签名**：默认只验第一个签名，`order-2` 不被它背书而抛错；用 `SignatureConfiguration(location="./Order[2]/")` 指向第二个签名才确认。
+- **重复 ID**：签名后注入重复 Id → `InvalidInput`（已有解析逻辑，补了断言）。
+- **命名空间 ID**：`xml:id` 引用正常确认。
+- **传错节点**：另一棵树的相同序列化副本、游离元素、字符串、`data` 为 bytes → 全部 `InvalidInput`；同树但未签的兄弟节点 → `InvalidSignature`。
+- **不可证明的转换/外部 URI**：手工构造真实 RSA 签名的 Signature（base64 transform、外部 URI 各一），验签本身通过，但覆盖断言被拒绝。
+
+类的 docstring 里写明了调用者应有的模式：从**待验证的那棵树**里先选出要处理的节点，传给 `verify()`，之后只处理这个对象本身，不要再对文档或 verify 结果重跑不受约束的 XPath 查找。另在 `Changes.rst` 加了变更条目。

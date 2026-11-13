@@ -1,0 +1,2443 @@
+{
+  "time": "2026-11-13T14:29:54+08:00",
+  "task_id": "uf-20261112-new15-xml",
+  "run_id": "uf-20261112-new15-xml-retry-2",
+  "uid": 1742,
+  "workspace": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\sources\\xml",
+  "artifact_directory": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\frozen-artifact",
+  "git_head_after_model": "77009d6ce974d4b0d1758e9da384a02ef37cfa6f",
+  "initial_sha": "77009d6ce974d4b0d1758e9da384a02ef37cfa6f",
+  "trajectory_file": "D:\\hc\\userFeedback\\cache\\runs\\uf-20261112-new15-xml-retry-2\\frozen\\trajectory-original.jsonl",
+  "trajectory_sha256": "88ba5f9e7bb847f2a6972b5bf2f30ae3e8ace46e5560a4b7390820d2424b01c8",
+  "session_ids": [
+    "e240114e-b1d6-4abe-aa14-f126192b353b"
+  ],
+  "prompt_ids": [
+    "4c1a67a6-1e08-4e75-80af-16b2e4723d81"
+  ],
+  "user_turns": 1,
+  "prompt_sha256": "bd13a2078df0468305dbb77ec3db8835eb641cb22705c8e32810a55263bbb94d",
+  "frozen_files": [
+    {
+      "path": ".github/FUNDING.yml",
+      "sha256": "2c5a1de0da9d59a5228d0ef323f5e6d581b5f0dba484defcc12d2b710aaaa41c",
+      "bytes": 18
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/signxml-issue.md",
+      "sha256": "40ec58280cdc33de560725df09de95d907ea64fa93fa0822a9731817cd571bd1",
+      "bytes": 1750
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "840dfa6c040deff6e0af790d0768f76d950e3b4c7db8d0b6949ffdd7b291c4d8",
+      "bytes": 1177
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "e54eb743ce566e353fa64935fea90e42e3b69e4cad0161d46857adae79b4508c",
+      "bytes": 490
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "f397aace7180dff193b96879418610eebb4ff32ef8672c3c0faaf9a09c052293",
+      "bytes": 480
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "76d091ef9aa851332b99bbbc2fcd230995b71fcb6a36e0c6d15a9d97c624cc13",
+      "bytes": 426
+    },
+    {
+      "path": "Changes.rst",
+      "sha256": "642ce84bd7ceb6a99b50f93368d2c201ba84e8f7bd748a85a3800276b2e8a6c0",
+      "bytes": 19152
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae",
+      "bytes": 11324
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "1ea56f53bca3c6f5a9520524759e86ccf6795bebc982d0d0598c1bf18880d8a5",
+      "bytes": 66
+    },
+    {
+      "path": "Makefile",
+      "sha256": "fd4b0e2021848c500d5b9909f63b6aef25236291efb2d1ea370d2887ad31e95a",
+      "bytes": 544
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "71736d195dad5855010f2c7201fddf881e5c6650123aa327c684a64dc54617df",
+      "bytes": 589
+    },
+    {
+      "path": "README.rst",
+      "sha256": "c54b1503e941362a315ad14e033899c68a7e5c76b34d109473e888f663fd076b",
+      "bytes": 18615
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "dd107ff1d81e267031c3ab97e3c413496fa8d1fa0cd3a18af3420d4563338c0e",
+      "bytes": 706
+    },
+    {
+      "path": "common.mk",
+      "sha256": "303f2215814c809b964f6c7ea398cb730395149ad1423f8bf792da0c17ffa86f",
+      "bytes": 1981
+    },
+    {
+      "path": "docs/changelog.rst",
+      "sha256": "48dc5cb6d9d293f812f49f99c3947ab4b35f4a58c6d113467bef080a8a022af1",
+      "bytes": 56
+    },
+    {
+      "path": "docs/conf.py",
+      "sha256": "70f829b3f78b695a0fbbbf3c89f8bf547b0eb672b342122b772d8738dc38c4c6",
+      "bytes": 1362
+    },
+    {
+      "path": "docs/dni-guidance.pdf",
+      "sha256": "b296c3873e3e2aa7d41c29fa76a355d278f3af7fc86a04c754745da74368e552",
+      "bytes": 1438054
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "07f66c5d8a9edad9ae960a8b98aba041296561dfce01fddc9f0f283d2f8ffdb5",
+      "bytes": 387
+    },
+    {
+      "path": "docs/toc.html",
+      "sha256": "ae18140824f7c77ca8262eb6ba97c484ed7474f1da03cd4f5e5bfb6f6b4d3c29",
+      "bytes": 8
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "a883b51527d6187b809353f955855e0a1ed983de47f37b45157bc5ad79fbf0fb",
+      "bytes": 2385
+    },
+    {
+      "path": "setup.cfg",
+      "sha256": "7b93cfff17cf00c3cccbc8062c04ae3d8408dbb4231eace2f45b1ac2f0335229",
+      "bytes": 139
+    },
+    {
+      "path": "signxml/__init__.py",
+      "sha256": "c550e4828d8756e9884a858498d486e3b424b5ebe9ea391532c097d08ebd54aa",
+      "bytes": 669
+    },
+    {
+      "path": "signxml/__pyinstaller/__init__.py",
+      "sha256": "1d78ce546541afc667bc267cce9bd26edb8fc5047f1db6106a88ecb8e37e58aa",
+      "bytes": 224
+    },
+    {
+      "path": "signxml/__pyinstaller/hook-signxml.py",
+      "sha256": "ea6a3a717eed4ee34a717aea293a5f86fb4d7d818e9221fc75ec561259818493",
+      "bytes": 313
+    },
+    {
+      "path": "signxml/algorithms.py",
+      "sha256": "47b6ac6be002a489b7c3608b2bd37aaa0bcfb90a70aac4c1b50d21fb72fd188f",
+      "bytes": 9637
+    },
+    {
+      "path": "signxml/exceptions.py",
+      "sha256": "af247d879e4e9c621c7af16990608a92d8cd97e740c98cc3ac0594c0224b4169",
+      "bytes": 614
+    },
+    {
+      "path": "signxml/external.py",
+      "sha256": "dfcb8d53f5724e2dae4bd3dce5e76b27d0d35c775eddeedb90a1e861002780d7",
+      "bytes": 6219
+    },
+    {
+      "path": "signxml/processor.py",
+      "sha256": "0fd5e65b0a8c1207e1ea301c6c08cb65bd9430f3ea9dbf1ac72e12f618500432",
+      "bytes": 8036
+    },
+    {
+      "path": "signxml/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "signxml/schemas/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "signxml/schemas/xmldsig-core-schema.xsd",
+      "sha256": "35cf8197da812c85e40d57891b35c94187569ed474a2dac813ce5090dafcd35c",
+      "bytes": 10293
+    },
+    {
+      "path": "signxml/schemas/xmldsig1-schema.xsd",
+      "sha256": "9bea2b18a0209b0ef1bf3149a56baf7bf7afaf77d8a8a3a8d20e9aeab3fc3f6f",
+      "bytes": 900
+    },
+    {
+      "path": "signxml/schemas/xmldsig11-schema.xsd",
+      "sha256": "5e01d78590a7d362a14b743be118dc0d1a4b184a26dd4ca56d6db1536a342de2",
+      "bytes": 4664
+    },
+    {
+      "path": "signxml/signer.py",
+      "sha256": "5c23b0d055f112325cc36b2fc31512528a9bcaed3265d27fefc117efc482aba4",
+      "bytes": 29328
+    },
+    {
+      "path": "signxml/util/__init__.py",
+      "sha256": "921ac6f746e43dc1f03fd24ba4d6084db476cf1d8bd96ebbc376df74f9410cd5",
+      "bytes": 10636
+    },
+    {
+      "path": "signxml/verifier.py",
+      "sha256": "e8ce26c189c111d500778edc7ba20cdb485e4354dcaeae7ea9c176565c5fd61e",
+      "bytes": 50987
+    },
+    {
+      "path": "signxml/xades/__init__.py",
+      "sha256": "4be328e84172ddd05e11747fece3e58c03c5e6915bb5e5fb89e28d4ee30643b5",
+      "bytes": 1938
+    },
+    {
+      "path": "signxml/xades/schemas/XAdES.xsd",
+      "sha256": "900379d4df9891d3be4f3367ad9b87565da1038bd78e7593cf0e05bddeb13b02",
+      "bytes": 21737
+    },
+    {
+      "path": "signxml/xades/schemas/XAdES01903v132-201506.xsd",
+      "sha256": "dd2f204a417ce82596b8232ceddeea8cd139adb48d34350724eb2ed09d654def",
+      "bytes": 24227
+    },
+    {
+      "path": "signxml/xades/schemas/XAdES01903v132-201601.xsd",
+      "sha256": "61a954b9cb102689576589da7c12341abb2c0e18ded1d1103e0231737b20f32f",
+      "bytes": 24056
+    },
+    {
+      "path": "signxml/xades/schemas/XAdES01903v141-201506.xsd",
+      "sha256": "52f10b4a369345492563ce86aafb47c5dee72025dcab834aca5ec1dbed09db60",
+      "bytes": 2664
+    },
+    {
+      "path": "signxml/xades/schemas/XAdES01903v141-201601.xsd",
+      "sha256": "47d5d1594f9c4545d74c6f2824ce004043e855b8314d312e7524fe5b4d287e60",
+      "bytes": 3184
+    },
+    {
+      "path": "signxml/xades/schemas/XAdESv141.xsd",
+      "sha256": "afd180a0180de70c47a0434f12bd2601fe1b4c005c1de88fda9a65b309301b94",
+      "bytes": 910
+    },
+    {
+      "path": "signxml/xades/schemas/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "signxml/xades/xades.py",
+      "sha256": "f96d9076b2b26f6627f9bc782c64d57e77617dc8d255811d4a20f4b05d401898",
+      "bytes": 24929
+    },
+    {
+      "path": "test/base64-detached.xml",
+      "sha256": "9770c2b44a0574d692e9ae01e65264e480bc67a179657f54dfc07a608569eba4",
+      "bytes": 714
+    },
+    {
+      "path": "test/base64-subtree.xml",
+      "sha256": "16757d9734de9ee0d4ea52d0a3ed1de80babb5dfdb8f65895bcf40c97a30ea1a",
+      "bytes": 758
+    },
+    {
+      "path": "test/base64-to-c14n.xml",
+      "sha256": "12d220fcd9eb85f7119e24080b88adc2332826e69130196182ab881752dce78c",
+      "bytes": 753
+    },
+    {
+      "path": "test/bytes-to-c14n.xml",
+      "sha256": "9a0013564a6510b534fc9d9d4140212f3986a5cd6c733a52c7e0d0b28e436e75",
+      "bytes": 681
+    },
+    {
+      "path": "test/defusedxml-test-data/cyclic.xml",
+      "sha256": "cc91e121fc745f8c795aca5bb1924336cf1f6f3e880b6089b7855c6f4a0f3d19",
+      "bytes": 81
+    },
+    {
+      "path": "test/defusedxml-test-data/dtd.xml",
+      "sha256": "e9e5c4a8244114cdc919cd8b1f45148005af58e9fc45684a7bba5aa21a63de6e",
+      "bytes": 213
+    },
+    {
+      "path": "test/defusedxml-test-data/external.xml",
+      "sha256": "a3932930aff4533f303fb6024e0be4029c9d7a39eccfd1d12628feccbafeb671",
+      "bytes": 102
+    },
+    {
+      "path": "test/defusedxml-test-data/external_file.xml",
+      "sha256": "b8f7361bec793d22c58485210c2dfcece6af76438fecc89b3535b54de8c3cf92",
+      "bytes": 104
+    },
+    {
+      "path": "test/defusedxml-test-data/quadratic.xml",
+      "sha256": "d1435f9f05b733da858399a4513363fdc679328c85d71cd3675089b583758f6f",
+      "bytes": 103050
+    },
+    {
+      "path": "test/defusedxml-test-data/simple-ns.xml",
+      "sha256": "fd605526a1004b662620292c1d808ed696b5cc61d9c5748121fd108071239981",
+      "bytes": 152
+    },
+    {
+      "path": "test/defusedxml-test-data/simple.xml",
+      "sha256": "24b3c8e971a76d61cbf6a1bc9f9806c2b8e651a3aae2978c21a5654e98a3ff33",
+      "bytes": 122
+    },
+    {
+      "path": "test/defusedxml-test-data/xmlbomb.xml",
+      "sha256": "e056b14e0d789aaef30836293641df7c1a8f329c5a8cd3afc587a17abd5b0f1b",
+      "bytes": 183
+    },
+    {
+      "path": "test/defusedxml-test-data/xmlbomb2.xml",
+      "sha256": "040ab9bd7cd7e831838a3616bd535cd029fe0cdaf31318b57f4b910eda0d4ae4",
+      "bytes": 88
+    },
+    {
+      "path": "test/empty-uri-comments.xml",
+      "sha256": "a7923e36eae86c613fc4144cc03a4704c9a19e256aceec4901f1ddbebc348e47",
+      "bytes": 795
+    },
+    {
+      "path": "test/example-125.xml",
+      "sha256": "4baeddd185284d9243139ad6ebd2112d5aedcbebe7d23fd17a39f8b6f9813a29",
+      "bytes": 4076
+    },
+    {
+      "path": "test/example-ca.pem",
+      "sha256": "8d16be938d180049d8a39ea4bf632f494d30a98244069ada0a4b54338dc986f4",
+      "bytes": 1424
+    },
+    {
+      "path": "test/example.key",
+      "sha256": "cb04634b0d9a54e9048f156034a683f41e67effd4ec1bb36d71028be4d0f9f31",
+      "bytes": 916
+    },
+    {
+      "path": "test/example.pem",
+      "sha256": "ff9c83da67cb99049b513106380fa51a959af42579e1f51d12c9c1e396d6e4af",
+      "bytes": 1558
+    },
+    {
+      "path": "test/example.xml",
+      "sha256": "234170dc4240068cb862bce98940d2e9499450aaeded8116db38d9b79842c6d5",
+      "bytes": 711
+    },
+    {
+      "path": "test/example2.xml",
+      "sha256": "2e4ed841f43a165e195ea1cf6c865f8c0180fa6856749b902a7ccc92d7d3494e",
+      "bytes": 841
+    },
+    {
+      "path": "test/example_ecdsa.key",
+      "sha256": "ecb2ae6e29d89347a1520fa720de771e6de725df31f1d2f429f15bcc96fbe492",
+      "bytes": 288
+    },
+    {
+      "path": "test/example_ecdsa.pem",
+      "sha256": "478259b81ec2a6f384b676b2c4b5d7948dbc42bda880640b95140354e4970a60",
+      "bytes": 660
+    },
+    {
+      "path": "test/generate_125_example.py",
+      "sha256": "b9b169e0e120aa421b27bef48b0c4cdc3a9f6a0c04ce4664e93fffc6b5f64d54",
+      "bytes": 13889
+    },
+    {
+      "path": "test/interop-modern/Copyright",
+      "sha256": "f231f0d37ce33c00afef1cde60b7ff365355ae5dbb7a7095e61300c7207fa3c7",
+      "bytes": 7317
+    },
+    {
+      "path": "test/interop-modern/README.txt",
+      "sha256": "b9695eb808d11194952a3b107aa0cb470ab5f52cb455fd6068bc0011ab635644",
+      "bytes": 1283
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/README.txt",
+      "sha256": "66250fe585fef13ea31d82fea5e678918167c0cc7ea52b538a2022c7864ceef0",
+      "bytes": 7627
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloped-ecdsa.tmpl",
+      "sha256": "3aa347302dde5686d070fc6807ba3a3400009a3366c611a9d71a5b4fc4bec900",
+      "bytes": 836
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloped-ecdsa.xml",
+      "sha256": "5fac6fdc0e68e13373f3132898f57b0adafc4518983c3c1348ed78a9232d4645",
+      "bytes": 1186
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-b64-ecdsa.tmpl",
+      "sha256": "e76cb4a47ee569943350bbbd6464996a24e1d53538fb5af71ab655c30925a87d",
+      "bytes": 775
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-b64-ecdsa.xml",
+      "sha256": "df71a3d940e522564a1632e007f54478e9815ccec375022061515d2059742272",
+      "bytes": 1129
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-ecdsa.tmpl",
+      "sha256": "9cbe4221bd5b6064d3a49f685888a2e93b14424481ff840d3dd2421676349af4",
+      "bytes": 658
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-ecdsa.xml",
+      "sha256": "b0314187d68c61a553ff5877e7b0fe6c3b6884477a948e9efe7668eb5feedb90",
+      "bytes": 1013
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-hmac-sha256-40.tmpl",
+      "sha256": "d86203f70a01bab66443e47127a4887e914903574d544aac79f58391227841df",
+      "bytes": 684
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-hmac-sha256-40.xml",
+      "sha256": "523f5c980d8051923211a3bb86efb8aaab90c3533fdc1fda5f26aaf81b1a260d",
+      "bytes": 739
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-hmac-sha256.tmpl",
+      "sha256": "978236e74bb8d213baf214702345fd61af6a4ec7480830bb506372f97df638f9",
+      "bytes": 617
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-hmac-sha256.xml",
+      "sha256": "2e15d9a1f0b80d031a3928af7ebb977698fc5a862737a3cb0c952aeee4f0149e",
+      "bytes": 699
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-rsa.tmpl",
+      "sha256": "f426402a968126b862c5a95d2c25c8f1c88f8ba042f7e9f4400d0587e10825b7",
+      "bytes": 651
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-enveloping-rsa.xml",
+      "sha256": "69af00172dae4e382f2b2e59013354cef278f0c97dfa7af5275e6160bf84f486",
+      "bytes": 1462
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-external-b64-ecdsa.tmpl",
+      "sha256": "e3cd3d9a01d779a37935bb1bff477fd74ffe652ab77861e99adf425b6f1ad504",
+      "bytes": 778
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-external-b64-ecdsa.xml",
+      "sha256": "46a0ca93062e303ecb113870da29b0dc84978769b33ef819a451067d70848275",
+      "bytes": 1132
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-external-ecdsa.tmpl",
+      "sha256": "66ee9bee40043cb8bba88a88c333745a7b564d71807c3442015db0b275995d9c",
+      "bytes": 645
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-external-ecdsa.xml",
+      "sha256": "80915fdcc027bbfd1436a7d5920685efad35b8ffd5bc3737dccadbaaacdd2842",
+      "bytes": 1000
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-keyname.tmpl",
+      "sha256": "c8e2ca5391e0eb3bf74664beae3bab79695b7b976978d5e994d6ba35acfc06f3",
+      "bytes": 626
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-keyname.xml",
+      "sha256": "a850c4bee126a877e07b88561e5a874e031ce686e9a5851fa613698f614c8f6b",
+      "bytes": 753
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-retrievalmethod-rawx509crt.tmpl",
+      "sha256": "cb9b42bf74120e0b2e2aaa40b7c4fcb98fcf7b0fe16e95f249266ac4518e9cb2",
+      "bytes": 689
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-retrievalmethod-rawx509crt.xml",
+      "sha256": "bdb52f1f07c6e9a5cf52a21f2dcd8919b62ad6d446be8362d64ec3fef5d83117",
+      "bytes": 815
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-crt-crl.tmpl",
+      "sha256": "b14d7e3f61c9bc1923aa3e8231affe3955f3bffb56785964f6c09b601f1b8ea6",
+      "bytes": 623
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-crt-crl.xml",
+      "sha256": "5a78bb1e0ae812b71295c92000e605da9784d8eed82d1e9ab16a9bf68e2c511e",
+      "bytes": 6505
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-crt.tmpl",
+      "sha256": "1f2710b96329a6b075dbf9b70b1d458387f4d64ce981058ffb09248c1ed46f30",
+      "bytes": 630
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-crt.xml",
+      "sha256": "8411a0c6c3e20fb179ecce21e5304c24461e6db628d883db0c54a4602577b8c5",
+      "bytes": 5984
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-is.tmpl",
+      "sha256": "bba041abf5d97ff8fe3ff8be79c6fdf9a7b64e6fe80ed00ae94141b66bea847f",
+      "bytes": 973
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-is.xml",
+      "sha256": "6bf76315c75c1dc3ddf312689136c9437522981fe5a21db828c5622076a5e296",
+      "bytes": 1100
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-ski.tmpl",
+      "sha256": "8901dfe7cff79d4bf849ff8bf48bdb34ee27e5253851941818b7969b4d756a47",
+      "bytes": 699
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-ski.xml",
+      "sha256": "c27c159550dc5a7d5b53208e25fe4a8670c291fb13337e6852cff835c1283f6f",
+      "bytes": 826
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-sn.tmpl",
+      "sha256": "0496c7f74e5c116ca31a15958e88bfa6e83ae815eb5292fa5f2277ee3690e051",
+      "bytes": 786
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature-x509-sn.xml",
+      "sha256": "3d57fd352bc09617ee9a47b458ba68bcdacc77100997fb68ec7be4b5ef65434c",
+      "bytes": 913
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature.tmpl",
+      "sha256": "8829511c97afbe81a8bfa691f929a9e90967a02efddcead83b3c0c3c7eed78f6",
+      "bytes": 11583
+    },
+    {
+      "path": "test/interop-modern/merlin-xmldsig-twenty-three.modern/signature.xml",
+      "sha256": "5cf86d37c33c19b0adab5c083bdd875b8ff7c45e07ae41a1669b62e9bf82705f",
+      "bytes": 12541
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/README.txt",
+      "sha256": "7e6a41a31f560b6305f94e56cc2d3a4c7a6da54e72eb154edd33e6cde09e0a3b",
+      "bytes": 10772
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/document-stylesheet.xml",
+      "sha256": "9a7029d293f01ed7c296ee822a05e3e35cb2c008f32b312c983987e9960b5e5f",
+      "bytes": 232
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/document.b64",
+      "sha256": "8c7dbfc1c404b32b4ef091439427e91a99f1114afcb557d7f23cb058f89169a4",
+      "bytes": 244
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/document.xml",
+      "sha256": "3bf386daa8dafe8b65435206b16da6d244c1d0ef5cd6d3e4b8539a37c08e1f22",
+      "bytes": 176
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/document.xsl",
+      "sha256": "2e4a1e3dd8000b244c20629b816e8b62d16d0b0040bf2b60acadb6c9337987b6",
+      "bytes": 819
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-big.tmpl",
+      "sha256": "7a1732778d93e43e6886d29ca53c005e659ee60d414cac1a6d769e1df2ff4fd2",
+      "bytes": 4861
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-big.xml",
+      "sha256": "e9e2dc67ef28ca8adb6303a466dca51ef9bfa7411f1fbe516aa8b126a5bd3f6f",
+      "bytes": 5738
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-detached.tmpl",
+      "sha256": "10f14326e407bf54c14275589c833cc170e0ea038b6a29b6779379e6b73fa9a4",
+      "bytes": 668
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-detached.xml",
+      "sha256": "2879cd7c7061e2847eae68174801c7fc106cbec5d7051395bbfd45beffe212b5",
+      "bytes": 6028
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-enveloped.tmpl",
+      "sha256": "c266914c18f392789ce54e8ad8748e897d47d9f05d369fab45245eb151b99c68",
+      "bytes": 941
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-enveloped.xml",
+      "sha256": "bf7e9f7554b61be8a7c8f6f37d5c9c51d7a7736f0d04cb298ebd035bc4ce36f6",
+      "bytes": 6301
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-enveloping.tmpl",
+      "sha256": "e0ca0459ae409f4ba9371d0e60e1b9c243fc838015b12d5d41119c890c4b2273",
+      "bytes": 921
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-enveloping.xml",
+      "sha256": "580abfd73deabb0f44c57525a17a6d0155d10666cc4f9b4f1bbed14148e0cbd9",
+      "bytes": 6281
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-manifest.tmpl",
+      "sha256": "ab35ef376b400f5188d318390152437e1c5fe9b66ba4ee7d2ccb2c94da3a2136",
+      "bytes": 1483
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-ecdsa-manifest.xml",
+      "sha256": "097b57147f15a183903e5e5ad6b05fc6531d7f4539139cc7042078f800b82dd2",
+      "bytes": 1704
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-40-c14n-comments-detached.tmpl",
+      "sha256": "7c9fcbc49132aaf1d54987d97a467c0ffa2172e58642305092deb03be7478683",
+      "bytes": 652
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-40-c14n-comments-detached.xml",
+      "sha256": "7de65114392c2d4359e10fd993fc1b37f2ffa6e805250a588a176e7c1062b6f3",
+      "bytes": 712
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-40-exclusive-c14n-comments-detached.tmpl",
+      "sha256": "11a7888396cb6749463e2c9b870d4bd8f5665e7c16cc0fa873bbca51f14de9bc",
+      "bytes": 643
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-40-exclusive-c14n-comments-detached.xml",
+      "sha256": "c01ab64b4c8641d4a95b824a002014828e95c38a73751eeac9096b1635f7fdaf",
+      "bytes": 703
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-c14n-enveloping.tmpl",
+      "sha256": "000a420a3128010d880638c460258eb4c677e4113b920cc0767fe1a22ba213c9",
+      "bytes": 816
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-c14n-enveloping.xml",
+      "sha256": "6487d46517c4de49f4e71bb158d73b4ea8352513635cdf2abac8e20eebece260",
+      "bytes": 904
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-exclusive-c14n-comments-detached.tmpl",
+      "sha256": "f0940f3b56466690a8d6ef05f75b8d2538f4963c7cc84325a538b28b8b562820",
+      "bytes": 567
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-exclusive-c14n-comments-detached.xml",
+      "sha256": "4c27dfcab6929b737f29a33c2507e931fa16ab480e0175e68b2761b483be9085",
+      "bytes": 655
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-exclusive-c14n-enveloped.tmpl",
+      "sha256": "7f3278da4b36f1f8472faaaeb50a55d5e5854166f4cdfef0e4231fdccb1b6e73",
+      "bytes": 828
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-hmac-sha256-exclusive-c14n-enveloped.xml",
+      "sha256": "8984305c5ee432cc3ab1522c2b975882959b6ddaeba4d11b11a2eed6e5e018bf",
+      "bytes": 916
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-b64-transform.tmpl",
+      "sha256": "d6a860ff65df7f6c7ab28675ba55f7f3e90526dd43d20be2a5e8fb8ca04bdc0c",
+      "bytes": 1575
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-b64-transform.xml",
+      "sha256": "db89c63b50738b223df6154e29c384066428fa4ce283286505267b913197ad10",
+      "bytes": 2012
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xpath-transform.tmpl",
+      "sha256": "a7ef3d1e8e5b52403c4171e39ee6aa058e5ce3b0300fdc5573fafc2ade9f39b4",
+      "bytes": 1753
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xpath-transform.xml",
+      "sha256": "9879b993644e2dd275b241e3efdea42ccb205a5450fe8c9c638c9fd48adf2079",
+      "bytes": 2190
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xslt-transform-bad-retrieval-method.xml",
+      "sha256": "17856222563a643557d8325d049e8dea85ce2c43e9d688c96ea79600aef831e3",
+      "bytes": 1414
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xslt-transform-retrieval-method.tmpl",
+      "sha256": "a70a6321ad7845300d0d0297e995b8f9ee1f69a367031c2ad627df7d2098ab5f",
+      "bytes": 2061
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xslt-transform-retrieval-method.xml",
+      "sha256": "c9cbfe5a902601b9d2cf1fe541d86277177027d5927122927f0be617e2ccf353",
+      "bytes": 2498
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xslt-transform.tmpl",
+      "sha256": "33d420fa872efea466fd7f48a17e21fd0e85f3384507e6a73acde10de2453772",
+      "bytes": 2430
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached-xslt-transform.xml",
+      "sha256": "58c4e1f974364bd1b54dee46d665966fac49edeb5cd92e3fb76223c63a654eb8",
+      "bytes": 2867
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached.tmpl",
+      "sha256": "435666f5312c81aeb4546844919d31eff2e6b2bec417fe86e25bbf048a35ae69",
+      "bytes": 661
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-detached.xml",
+      "sha256": "66808ba7b179e19e0ecdfc83df864bd9458b74592f4c2e40aec2a2a0eb7ec352",
+      "bytes": 6549
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloped-bad-digest-val.xml",
+      "sha256": "f3448850673ffb395363a313dcffed258719af2a16d3084aea60f18e83c7769a",
+      "bytes": 6822
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloped-bad-sig.xml",
+      "sha256": "07863b6b188ff01c4e691c6860ba6a507f9320aab4c60d8dee9dcb65342f6d80",
+      "bytes": 7176
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloped.tmpl",
+      "sha256": "7d483d961b38798c533d58c1c31f9c570614064d64c7099061937d3303c48708",
+      "bytes": 934
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloped.xml",
+      "sha256": "d1fadfab2a382d260d7a653b501801753eb5091b0412c913ed318929588656f1",
+      "bytes": 6822
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloping.tmpl",
+      "sha256": "c158a2c552a811194ec500ffd4df0ca2be51d9d41ce63cf5c2b64991b89e43f7",
+      "bytes": 914
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-enveloping.xml",
+      "sha256": "6a38777f01f5453ff5b86c5e380341bc5fe468f44911eca228baf1c3388b09a7",
+      "bytes": 6802
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-cert-chain.tmpl",
+      "sha256": "3e14e8aacf27901ccd0fff57869b9afe126dca31d42ca032258e3929670b8c81",
+      "bytes": 5476
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-cert-chain.xml",
+      "sha256": "e38a9c0e2d9985a809fa001ca21b7719ab6a8d60917cfe7d4e679e5010935090",
+      "bytes": 5957
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-cert.tmpl",
+      "sha256": "dbea55b98c27b4bb0c09f5d942a68f250dc9b06cb4e1d2e456256f03d8cb2663",
+      "bytes": 3306
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-cert.xml",
+      "sha256": "28db92a118822e52aefeb67ac97e6b880161629fdc77263fca2bccb61bf22917",
+      "bytes": 3787
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-crl.tmpl",
+      "sha256": "3e14e8aacf27901ccd0fff57869b9afe126dca31d42ca032258e3929670b8c81",
+      "bytes": 5476
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-crl.xml",
+      "sha256": "e38a9c0e2d9985a809fa001ca21b7719ab6a8d60917cfe7d4e679e5010935090",
+      "bytes": 5957
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-issuer-serial.tmpl",
+      "sha256": "b49490e47539c5e7aedb4faf42e6142a94ac3c42f2216588003bee3202dced65",
+      "bytes": 1495
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-issuer-serial.xml",
+      "sha256": "15a3734803d8580490b5c9162ec90e66f720e59eee55ac4e9644ff5862367d0b",
+      "bytes": 1976
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-ski.tmpl",
+      "sha256": "c847c514b3e0dcde977ac1a20fa199b21352fe0263616af114f3b7a3355e56ce",
+      "bytes": 1215
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-ski.xml",
+      "sha256": "8dd9f285fa9774b638284f9409112128e11a0a11872b637f5c88f5c482e79e44",
+      "bytes": 1696
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-subject-name.tmpl",
+      "sha256": "3700c4cf12ea413fff23bfab47d98d862dd499a1000cb0be093f7646d40b2027",
+      "bytes": 1297
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest-x509-data-subject-name.xml",
+      "sha256": "8ad233c1cb95376dcab4a0e6feb683e0911190b35fd85ef164fc523eddf93b71",
+      "bytes": 1778
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest.tmpl",
+      "sha256": "68a238b5054025bc77499e8b5f86bced4648efd00da05c15395924b4fab51c89",
+      "bytes": 1666
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-manifest.xml",
+      "sha256": "918a84cf2057ebc370ece5c8a7c310b4b63cf0dab28dfc7606842339a8bc949a",
+      "bytes": 2147
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-xpath-transform-enveloped.tmpl",
+      "sha256": "2e762e84a506ff70d47f719492dbbe54af6eb2b67d2ad3ba7312ce7ad502a0c0",
+      "bytes": 1117
+    },
+    {
+      "path": "test/interop-modern/phaos-xmldsig-three.modern/signature-rsa-xpath-transform-enveloped.xml",
+      "sha256": "e7b71817c83785abd21b6adaf63d821505137ed0b072d950f1cb2ef916e0b933",
+      "bytes": 7008
+    },
+    {
+      "path": "test/interop-modern/rfc3161.txt",
+      "sha256": "39fd17644ff2d654bc83814a78b1c5b5e7517f496741f34ead5064943eb98240",
+      "bytes": 54585
+    },
+    {
+      "path": "test/interop-modern/rsa-4096-cert.pem",
+      "sha256": "084673f7b17150d022abc7c587a59a4482e84b74acd4c29134ca0f22d0b5752f",
+      "bytes": 2171
+    },
+    {
+      "path": "test/interop-modern/xml-stylesheet-2005",
+      "sha256": "788d4e2d54ad9fa678abb072abc5c6509e1b71ed4b31295a9c8ea8f92bd8cedd",
+      "bytes": 13132
+    },
+    {
+      "path": "test/interop-modern/xml-stylesheet-2005.b64",
+      "sha256": "f5231e2a51a57659cc3bfc722226b20fb1508d2865d287cf0580bd5c837d9764",
+      "bytes": 17786
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/README.txt",
+      "sha256": "792649f0a29435afe157b88d6fdb2c8b3ae2a5e2d72835adee99398e7c352ede",
+      "bytes": 7014
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-derencoded-ec.tmpl",
+      "sha256": "853c95d02b330ea3f18c8f69a832064eefcdffed4f4469b789b8f1199b50885f",
+      "bytes": 947
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-derencoded-ec.xml",
+      "sha256": "444c1e79276ac73970f36f9df3eace4fd9fcbea2cf43a81558816e50d9c5b536",
+      "bytes": 1271
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-derencoded-rsa.tmpl",
+      "sha256": "45537a662c0bb7a2506cff3859aac5115e5b127eb9ae668f0a1f22e71d269f13",
+      "bytes": 940
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-derencoded-rsa.xml",
+      "sha256": "c20b7e61799d899ef1cecce8c428c1c15706fa92cdb8398f2132b3defaf3d6a0",
+      "bytes": 2491
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha224.tmpl",
+      "sha256": "f4e67b7f201b82deea4abbb706e5f3581b015e27c7c43238abad79dbe64770eb",
+      "bytes": 722
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha224.xml",
+      "sha256": "32317e492ce6b32a4046d93e5a53617f887364eb3d8cf97dd403718f12c7c298",
+      "bytes": 845
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256-truncated160.tmpl",
+      "sha256": "8017eaf5e9c757bb896ecb0624891dd6c3afdb11c7b455dbccc89aed77975083",
+      "bytes": 794
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256-truncated160.xml",
+      "sha256": "3cf8d9c6158d25a436eb7bfe3f8c4c84c4deff1aca91b990c33d8c35c0bd360e",
+      "bytes": 905
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256-truncated40.tmpl",
+      "sha256": "f5aa9e1bdb48fd6b3fba224232228723da447e9adf934758b79c203537d13a8c",
+      "bytes": 793
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256-truncated40.xml",
+      "sha256": "3ca4546e1ae987a2a2f4e497c8f64495923455a86fe519a4651286c2049f6130",
+      "bytes": 884
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256.tmpl",
+      "sha256": "59cd6ff5672e20c62d040f60a28d30fe62e10db70b1323af7a0fbc75a8399bc7",
+      "bytes": 722
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha256.xml",
+      "sha256": "3e997cc0a856d57ba10c972c925e93eda2de8d80fd64504af221c63b59f1f933",
+      "bytes": 849
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha384.tmpl",
+      "sha256": "8f41594f59fb69ece8933b37ae2a7a791da9f51e871d01729571ef70e2cfc005",
+      "bytes": 722
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha384.xml",
+      "sha256": "fc5707570b376525cc86f08164643b10a0f6bd171d742536fb52d5bc6edaab3c",
+      "bytes": 869
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha512.tmpl",
+      "sha256": "7452ef8b669f294b8755250c76af60dd4314d4d7174b43070540d919645d49c3",
+      "bytes": 722
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-hmac-sha512.xml",
+      "sha256": "4b33bda4b12d253b6197b0693edaf64845d70b8db7baf3ce379a3b963da39210",
+      "bytes": 894
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-keyinforeference-rsa.tmpl",
+      "sha256": "19ffd9613c6069deb238c4a66c5192a61bdd3bfd6406942b0f8a7417d8e887ee",
+      "bytes": 1154
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-keyinforeference-rsa.xml",
+      "sha256": "a581b45efcf10eba27be5b040e2f8a9e67dde202ee9797bbfb71d6633ce3b64c",
+      "bytes": 2813
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha224.tmpl",
+      "sha256": "233bd9c438b4be3c8e6e3d71e2ec7811b2aab8fa170490682427b2122115aa73",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha224.xml",
+      "sha256": "1db505bbfbab508aea3988ce75187e3ab50b34291a908a3023fe3471d6767185",
+      "bytes": 1214
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha256.tmpl",
+      "sha256": "1dfb619f3ef503e8adcca9c7b505e336673a193e366a4ad009246e63490d61e5",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha256.xml",
+      "sha256": "6de61cb4b9687f025b407f7e3221b719612f95a700f010580b979b074d6e7eaf",
+      "bytes": 1212
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha384.tmpl",
+      "sha256": "3a7966d0e3a7b5ac008ce4bcb89a287ec002db9aeb618ed94ef5daa2d5aeb2d0",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha384.xml",
+      "sha256": "0063dc10acb1bb85a66dcc9df162010f7f21ef89620f40a3fd213888ea1049fc",
+      "bytes": 1238
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha512.tmpl",
+      "sha256": "1d06d3bab37ea354e4e70590d6d17d14cbeb0fa481eecb18ac92be768c516b53",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p256_sha512.xml",
+      "sha256": "d10ca925a230b4e10d544b657698c83f0dc15ad1a23cef9043b8c870143758df",
+      "bytes": 1257
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha224.tmpl",
+      "sha256": "1936e0bc5749452d4072327a90e7c777de7e4cf15120169337df55ed62b5ad25",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha224.xml",
+      "sha256": "ea88bcc83e6067fd5d1c0b677f6efd548f1c21ff8dd4dc397bd123f61a722866",
+      "bytes": 1292
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha256.tmpl",
+      "sha256": "0b46a05c7a317e02b530a99a88523e37f8f48e45b76a0326ef721c1eafbfb680",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha256.xml",
+      "sha256": "e0426296db3064af61a0b3013397fda785babc9937d9ce988304db80c61e11ca",
+      "bytes": 1290
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha384.tmpl",
+      "sha256": "b70846b3d8d849bb6685ac2f686bdad08880202c55a6dc0045f22ca94f352bcd",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha384.xml",
+      "sha256": "a51cb52cddba72c49cf9ec78d07af6a1f547e6b733678e556e7a0fc283af1c92",
+      "bytes": 1316
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha512.tmpl",
+      "sha256": "8baed4d620c566c5606894f254cbdc058c145df91100463682083ccc5f8d5003",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p384_sha512.xml",
+      "sha256": "b08944ce73d1a5aa340e4d5b31241e7101d01d76fda80b0146c3ff6730e7cc2e",
+      "bytes": 1335
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha224.tmpl",
+      "sha256": "13ecda260b8de0a6d3521b31ba85bcd5b0933dfd900f87548ba30b0899bbf0fc",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha224.xml",
+      "sha256": "8ec421e8d54a4584ef1176580ea80675f09af0d9252f5b03960cc8003f7046f7",
+      "bytes": 1389
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha256.tmpl",
+      "sha256": "89c6f677785caec9b8279204164558c071505bae122278898dcf2e66acabd042",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha256.xml",
+      "sha256": "cce2f1e7e584c1cb91efedfeb2ee3d35c98fab5b8909684908a426a969c09a68",
+      "bytes": 1387
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha384.tmpl",
+      "sha256": "e9781ab99e7a91180615e3115e12f2961b5ba1557485197dda3539a2e62752ee",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha384.xml",
+      "sha256": "d48e048d54c904c3f50f229fd71d2304cac0d39dd3bfea167df8a8dc2344bdcd",
+      "bytes": 1413
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha512.tmpl",
+      "sha256": "17934c5d12b7b2559a0727e9e72be419f6e4d837a6f81a05d1e216a808598160",
+      "bytes": 792
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-p521_sha512.xml",
+      "sha256": "92da309d62ceb0e44e7319a312b168779d3804ca7b5a10d67a3d12f231bb76b8",
+      "bytes": 1432
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa-sha224.tmpl",
+      "sha256": "d9e2a995dcb06f8ca2ca7bd1d9933ea3264dac7120cbac8b9c3877bc8f6e75e8",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa-sha224.xml",
+      "sha256": "288a134efc695373598dd200a0bfc8f574fe1db095a06da27bb2c2bcc4d24744",
+      "bytes": 1691
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa-sha256.tmpl",
+      "sha256": "fd71d22d4d7b1b50c3a1419b37486fd667e57f8ba88c05f6edc37a86d69ea814",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa-sha256.xml",
+      "sha256": "5520b5bcbe626b8ba3fc2867015243fe034e93bc5734e7037fc1ff05610f24a9",
+      "bytes": 1691
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa_sha384.tmpl",
+      "sha256": "da4ecc08efca3c70305481194cf8ea8e14906b5db57f137eb6e4da842b49f4ed",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa_sha384.xml",
+      "sha256": "4d7004173520ba6503f50b268316e8b56faed62efb25191b722248fb9e052ea7",
+      "bytes": 1691
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa_sha512.tmpl",
+      "sha256": "e4d7778f380feb6f0f0de61adb2692e4c6fe97cf65c616bd92d1ad3c80c5cfe7",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-rsa_sha512.xml",
+      "sha256": "a958065beb8052d925d5dd61d95bd95fff84275c9a16eff4400926b29ea2979b",
+      "bytes": 1691
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha224-rsa_sha256.tmpl",
+      "sha256": "cb5bbfab9d7622bedc92bc6c92be42e2ba1c49b1ad3d4a50f25a576c811a6827",
+      "bytes": 791
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha224-rsa_sha256.xml",
+      "sha256": "d97711213760cb9b9d5120c777ad6a418c88c6b6ea5903a21a1e88e772b7306c",
+      "bytes": 1693
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha256-rsa-sha256.tmpl",
+      "sha256": "fd71d22d4d7b1b50c3a1419b37486fd667e57f8ba88c05f6edc37a86d69ea814",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha256-rsa-sha256.xml",
+      "sha256": "5520b5bcbe626b8ba3fc2867015243fe034e93bc5734e7037fc1ff05610f24a9",
+      "bytes": 1691
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha384-rsa_sha256.tmpl",
+      "sha256": "156cf2f2caf3b91062aee51700332d69cba23e96171cabcafec3fe1b75f1adcd",
+      "bytes": 791
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha384-rsa_sha256.xml",
+      "sha256": "108cf1bf401be295e7d688b34ba07fece16effae446a1cb4372c6d7e248bc36c",
+      "bytes": 1717
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha512-rsa_sha256.tmpl",
+      "sha256": "c21bb3e0bb5752c1b90948f6937dc64e877834e22bc2f7f0f527503c1c3734db",
+      "bytes": 785
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-sha512-rsa_sha256.xml",
+      "sha256": "23aeaf2da95d5016d9ab94f49c9ba03b6ece052508eb0f897df550cf54e4d405",
+      "bytes": 1736
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-x509digest-rsa.tmpl",
+      "sha256": "3e1bdcc83ad27c055eab09e65a2a439becf43a30a667483d6ad81a98652f9b18",
+      "bytes": 1050
+    },
+    {
+      "path": "test/interop-modern/xmldsig11-interop-2012.modern/signature-enveloping-x509digest-rsa.xml",
+      "sha256": "066e0c622e9912fda45c0af4b497262146af684f2935d305cd52e8743a1d7f10",
+      "bytes": 1827
+    },
+    {
+      "path": "test/interop/TR2012/rsa-cert.der",
+      "sha256": "af963db86bb4fea9475b13d71e42a1b311d6c0bd1256a58d42d1b26ffe2fb253",
+      "bytes": 724
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-derencoded-ec.xml",
+      "sha256": "8761d6493fcd3842fdeb20ca565c2e93af90582b6214c8691408b3d7ed3aef39",
+      "bytes": 1121
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-derencoded-rsa.xml",
+      "sha256": "ecabb55348fb323c45ac5981f127731b0281b47902b0872b13d4c6eb1d3b8e8d",
+      "bytes": 1295
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-hmac-sha1-truncated160.xml",
+      "sha256": "0c64fa83e44e889a2ff4f82d5a057a6138a837480703a9f2749d80b14d02b153",
+      "bytes": 803
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-hmac-sha224.xml",
+      "sha256": "925a84ce179e7f9afa22ccc9f75867287daa30dad9036a05601432fc54356f04",
+      "bytes": 750
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-hmac-sha256.xml",
+      "sha256": "10fd1a36a3a07881c64040b62400bb1f2645878049ccb9c46a4a8c59664eb44b",
+      "bytes": 754
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-hmac-sha384.xml",
+      "sha256": "4981891f21fea38398d2555089348ece0ec94dcf55eb31b9963d1b1e2ff2d62f",
+      "bytes": 774
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-hmac-sha512.xml",
+      "sha256": "e81c890cb6cd8f9b6d3a2e670298acb34ca4e47b22ccda50a63aa152cac6ff83",
+      "bytes": 798
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-keyinforeference-rsa.xml",
+      "sha256": "79d3bee2d0e47e5abd8ecf9941eba2fcdf7af5f1104032e11b8c69a84d00c8e5",
+      "bytes": 1552
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p256_sha1.xml",
+      "sha256": "4b254c000e661d2eb4c1f853376af9c19f9ce9d548549ecfe7df0325665e076c",
+      "bytes": 1036
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p256_sha224.xml",
+      "sha256": "9c62a9a5a63244556f5fb1defab0cff50fcf6e36bb2bbaa1bc1afe9a806a2dec",
+      "bytes": 1147
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p256_sha256.xml",
+      "sha256": "9f6622702dffc1532cc8aa94f5fb6c65ec272f1a39cd3076db68271ca3d7e0b5",
+      "bytes": 1055
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p256_sha384.xml",
+      "sha256": "cb13a35b1a2d97d25c8b3b35d2ddcf643cc5e5f9fd20d6e9f1e77c69e44315cf",
+      "bytes": 1081
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p256_sha512.xml",
+      "sha256": "267776d7718306d66278426208088aaf96bace5a2592ca8b43c47b4eb7cb4016",
+      "bytes": 1099
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p384_sha1.xml",
+      "sha256": "8ed476b89de92e94fd048b31a2313d206f4e3c1d8cd999804d4ff826c02e45a7",
+      "bytes": 1113
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p384_sha224.xml",
+      "sha256": "635e823acc9ee0f61006e467a94d2e52840360dc9a7f616ffcdb6990184d5db1",
+      "bytes": 1224
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p384_sha256.xml",
+      "sha256": "9c44aa380a9c257718842fbe403d881cf726039a665811a60aeecd1a6822b1cf",
+      "bytes": 1132
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p384_sha384.xml",
+      "sha256": "a8ce19a25f5b31f8376c69e3c7ebe0ae71656610c3c6eabb9965855bcea75281",
+      "bytes": 1158
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p384_sha512.xml",
+      "sha256": "39f01a3a824b9fd2b57177fef1f8de1e6374cc9828b6e94b60816d971dfe55f1",
+      "bytes": 1176
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p521_sha1.xml",
+      "sha256": "d3c2a9797e814d02fe09a189c2e9557ec43ac2ae8812e07903125e26448dd085",
+      "bytes": 1209
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p521_sha224.xml",
+      "sha256": "72a82f2baedc955a5a92dd34aa67170f1be4d8c1071d4975ff56fc2208170767",
+      "bytes": 1320
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p521_sha256.xml",
+      "sha256": "d6f2609bc53675b335b2334643aa1075829de9a093ad9ca653964bc76021ac33",
+      "bytes": 1228
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p521_sha384.xml",
+      "sha256": "ddc2672ff0b8560a83d14938e9c7d456c193ded4ed417878d75685472fa43aaf",
+      "bytes": 1254
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-p521_sha512.xml",
+      "sha256": "0310b0d202cfdd5e56d683e2760ea27c3a65315e33b2951c83284ef17ce88c9d",
+      "bytes": 1272
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-rsa-sha224.xml",
+      "sha256": "6592800038fab9df2db193a60892fb501c1eef917b198e61cd55e4c1e9911a77",
+      "bytes": 1216
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-rsa-sha256.xml",
+      "sha256": "f91011e866ed183dc88689ebc71f41db1f1b9f1f89240b9c27776446fcc18267",
+      "bytes": 1214
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-rsa_sha384.xml",
+      "sha256": "a8f1057f9c6c1b6195d3065d4945fd6eaa60644b063869c56660ae078d219a36",
+      "bytes": 1214
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-rsa_sha512.xml",
+      "sha256": "6ba9a405adbb5055a65e0287e805faac0cbd234d7617d5f6ee17b9ac2c0e6b46",
+      "bytes": 1214
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-sha224-rsa_sha256.xml",
+      "sha256": "26612f9758a69fff5edca1d3e3af35c5a50a6ed4495a56c6351b1b447ee71f6b",
+      "bytes": 1235
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-sha256-rsa-sha256.xml",
+      "sha256": "7ace45caa5a6cbee70ec4f9c41a6f254a06c600717b319715d6183ebdc6a316d",
+      "bytes": 1231
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-sha384-rsa_sha256.xml",
+      "sha256": "13c717cc44c32a061a4c604034876d0aca44ddf5149b46f1dc5e0e8c49d22cf6",
+      "bytes": 1257
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-sha512-rsa_sha256.xml",
+      "sha256": "6a634f45e2b67bba816c51dd395e6f0b41f3d50fb51df4beb50468569c6257ba",
+      "bytes": 1275
+    },
+    {
+      "path": "test/interop/TR2012/signature-enveloping-x509digest-rsa.xml",
+      "sha256": "7d2b412cdae6153cab2a9aa3d9b7a502cae9570c31b83be1e827d07a02fce094",
+      "bytes": 1190
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/cacert.pem",
+      "sha256": "e2b457b87a048523d3ee479fcd4d2ecd164f96f7640e5c9d833d2d5b2c15600b",
+      "bytes": 989
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-1.xml",
+      "sha256": "599aed90233aa20d03ccddf24d8ffd552a735dd3e9afbeb35447bad773656e75",
+      "bytes": 2134
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-2.xml",
+      "sha256": "64599284ed69199a72a96f47c81eefbe5a266c723ac338198153b3cc73950397",
+      "bytes": 2131
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-3.xml",
+      "sha256": "8cff8ee362119333f6386ed9bc6333fa03520a246ffb411ed9ca2dd4e0f22418",
+      "bytes": 2125
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-4.xml",
+      "sha256": "125377b2c2fdd582d8499547e0235fc12d8598edf7cf6292edee123f16a9b2dd",
+      "bytes": 2122
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-5.xml",
+      "sha256": "dbc53583f2f76fc858867f9b928c11deb67576ac17e7bdde6a8ff539e355a406",
+      "bytes": 2103
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-6.xml",
+      "sha256": "a8abb7311b631d1a445cd57505d9a063fc60bbfef0d97c2e58c25c085cad6070",
+      "bytes": 2101
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-7.xml",
+      "sha256": "6f432c59b8b248da6cf91f8f5d316b70750af42ceda02b14096b455162aea73d",
+      "bytes": 2094
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/enveloped-sha256-rsa-sha256-test-8.xml",
+      "sha256": "7531f05cbc590a335c4e62204b9cd8a8b35aaa00f53b933d18c281bdc3de2eb5",
+      "bytes": 2092
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01-enveloped/invalid_enveloped_transform.xml",
+      "sha256": "1913d354a1b5376ee6987f4eac919aaf06c741afd884465d287aac3081f9cc21",
+      "bytes": 2164
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/Copyright",
+      "sha256": "95c2cc5fdc0c4d985c32dab0ea750d66e76e3e444a24af6cafe845629511bedd",
+      "bytes": 5167
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/cacert.pem",
+      "sha256": "ef671253e32ad1af6b541ba542cce074baca3cccfbae879891f6ee54a99f2e2e",
+      "bytes": 3837
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-dsa-x509chain.xml",
+      "sha256": "6188037db95ce5122c9871bd020cc6b7b0a3df6ab4f1f5628e951bd7a385af35",
+      "bytes": 4968
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-expired-cert.xml",
+      "sha256": "b81adc737e1101db2fb39039028b03f8292cc7e03085dc6cc74376b8456e9f71",
+      "bytes": 4790
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-md5-hmac-md5-64.xml",
+      "sha256": "d5370f7afa3f090c900d4c483b1e7ac6654cecf9780d0773acb8875d00bf0837",
+      "bytes": 654
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-md5-hmac-md5.xml",
+      "sha256": "b95bb04728128d8b748661a790687850eb8326050194fc15aa5d2da47b95c31b",
+      "bytes": 594
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-md5-rsa-md5.xml",
+      "sha256": "2a75dacb17a49445f063ce911a8ed159dc0c1f6474295a5c7cca0f36038f19d3",
+      "bytes": 4798
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-ripemd160-hmac-ripemd160-64.xml",
+      "sha256": "85c1b2be637ad8f9b6f0df622ee222c6e60c480a8f7835bd056d9c6ef56a30d7",
+      "bytes": 664
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-ripemd160-hmac-ripemd160.xml",
+      "sha256": "b6be57720434af8abaf016e1c70bb01c0311ce2f29b178c7ed99875ad2ae5b56",
+      "bytes": 608
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-ripemd160-rsa-ripemd160.xml",
+      "sha256": "a33512b096479af15ed0be7b410a33862e6eefcb94589ff61f40e9ca7e3e14e1",
+      "bytes": 4808
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-rsa-x509chain.xml",
+      "sha256": "95686cd9c29bac16867182506225c3ce134b89f275bba0d6298d54c70743073f",
+      "bytes": 4798
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha1-hmac-sha1-64.xml",
+      "sha256": "93886da4aab85bbfe981c10219585cdbc12d383f49bc9a4e18c2ad31d4a4c4f0",
+      "bytes": 650
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha1-hmac-sha1.xml",
+      "sha256": "efe59a5218999a915742e47510311d7481a18bfff65a666394af0869946308f2",
+      "bytes": 594
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha1-rsa-sha1.xml",
+      "sha256": "bdbba52d08e845edc4866f1e3703eebb6640ae25b17df05ad1062ac5027970a9",
+      "bytes": 4794
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha224-hmac-sha224-64.xml",
+      "sha256": "70c6d32f7a24bd8a07a42dcdaa052b8d8985ae5759477c3e6230abee4b2cad51",
+      "bytes": 676
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha224-hmac-sha224.xml",
+      "sha256": "7cd65c14f895b1c186087f4328cc616788ec4e7043abc13f01e3691d372b2ad9",
+      "bytes": 632
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha224-rsa-sha224.xml",
+      "sha256": "d172a7295363fb4f585dbaae21f52ab1d3b5b80c59db8a6930d579e8a9ef24af",
+      "bytes": 4820
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha256-hmac-sha256-64.xml",
+      "sha256": "502fbb8ea8e085cd86cd6708a582d43362a8bbf4fb69f05cbc69c061a24fc7f4",
+      "bytes": 674
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha256-hmac-sha256.xml",
+      "sha256": "9cb6306b05817c317f2501404b7bc9ba149003ded9bfc9104c0431e63b9ec52e",
+      "bytes": 634
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha256-rsa-sha256.xml",
+      "sha256": "7877e33413e95439ff0bbcbcc01792beea853ca477c66d6eefeee40429614108",
+      "bytes": 4818
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha384-hmac-sha384-64.xml",
+      "sha256": "c4cde210c2f9ce6b6ca3bfce773c703dca27a7e1ea461375211edce1059cb8c5",
+      "bytes": 700
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha384-hmac-sha384.xml",
+      "sha256": "7984a72bbbf15e87e9af3ba373e804bd4cf69ec736d5e48c81259f62077a09e8",
+      "bytes": 680
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha384-rsa-sha384.xml",
+      "sha256": "cb43b0821640d9fb1c9413c1bda1f1227594ba32bd421c5f2e2b1e9b7e522aa5",
+      "bytes": 6050
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha512-hmac-sha512-64.xml",
+      "sha256": "c86834dd61633bf193124e35a24d89593f8311dee1e0883ab67e6f4375333803",
+      "bytes": 719
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha512-hmac-sha512.xml",
+      "sha256": "2bf7c63ee9f294b46a4e57083570dd9928971a3591ed148a1f2bdcbb4941b661",
+      "bytes": 724
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/enveloping-sha512-rsa-sha512.xml",
+      "sha256": "03e79d097f56927ae788e56f38f25d4e83fcb331cfa2179adb08b81e3a962549",
+      "bytes": 6069
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/x509data-sn-test.xml",
+      "sha256": "e98f8a8e911acfac80a24af4971d13495caaf6e515439136fd5801171a54e838",
+      "bytes": 1815
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/x509data-test.xml",
+      "sha256": "9ec14300f10534024a163866f903f29c053c6e5c5b95f9f3f777ff60d7e838ac",
+      "bytes": 6604
+    },
+    {
+      "path": "test/interop/aleksey-xmldsig-01/xpointer-hmac.xml",
+      "sha256": "4933f8dc7ef71bc5d39761f624b6a66f1d74c2b97289814a4d09f030cece82cf",
+      "bytes": 1096
+    },
+    {
+      "path": "test/interop/cacert.pem",
+      "sha256": "cd0ba4f78d681e70f473b29ccb43b1494c81486eacdb8e4ccb6adca44698013f",
+      "bytes": 1554
+    },
+    {
+      "path": "test/interop/enveloping-rsa-x509chain.xml",
+      "sha256": "a16d9befc1d559baf7cd884fbb0a94bb23d4eaa42f2afcd09bd9000883f585e7",
+      "bytes": 5086
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/Readme.txt",
+      "sha256": "ae900c3eb762ef698ca3133cfd63a96ae7f89238e4c54bcd40f37406ccbec998",
+      "bytes": 2180
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/badb.crt",
+      "sha256": "8f47c866e0fc63824ae269aa8f2adba633b1c0c56f48587a9c073e007742018d",
+      "bytes": 850
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/balor.crt",
+      "sha256": "b7e14a417f9c11d512f92416f001272d49e179764f890219704236be28e44645",
+      "bytes": 851
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/bres.crt",
+      "sha256": "f4b4e1b2456774ac46aff2e6bfcc32d2dab5e31303bab3cae71e44f798879c1e",
+      "bytes": 850
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/ca.crt",
+      "sha256": "5949786be72b75e7bccbe66e7b0f7519fbd41d0b965e722b66d5173e18cdb9f1",
+      "bytes": 862
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/lugh.crt",
+      "sha256": "bcb90513cbba8ee96867d58cafb0834e07c294fa785c5ce656222f5f93a96afe",
+      "bytes": 851
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/macha.crt",
+      "sha256": "2d38aa927c445ec5f8563685d15ff23c30c332bb388a9ee047cb7559ff6772fe",
+      "bytes": 852
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/morigu.crt",
+      "sha256": "facf6c27ec6a374a3b3e08f21f748bcc6aa73b45b74cebdd28465532feab38b1",
+      "bytes": 852
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/certs/nemain.crt",
+      "sha256": "638ee72b90ff9d5f0a1e08ac139f89d967edb769598fd9e0e6773e5b31656812",
+      "bytes": 852
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-0.txt",
+      "sha256": "0af1f104f672e24f0e12a6b332b172e118b25be58e2ce360f369c6fab154a1d1",
+      "bytes": 14
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-1.txt",
+      "sha256": "4949c928136bb1d70e94f18ce5a5ab8be6d08d60292c9f8bc77c7bcca5eeb466",
+      "bytes": 323
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-10.txt",
+      "sha256": "f1d84eeb012e959ecf799ee13a992e919d9cbc33fad74d71a6134cbd6a1aeb00",
+      "bytes": 2078
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-11.txt",
+      "sha256": "5955c083193d3ea181f721cd78add18443328b194c4c2863a0aa5d3cce337142",
+      "bytes": 303
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-12.txt",
+      "sha256": "8255987c1349cc8c24c21edf17c551847f832257df8820dd07097ed6d4f60f82",
+      "bytes": 399
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-13.txt",
+      "sha256": "2ef492a891f630e7fa5cdfcc2f3d5fb6f13c196f6e4f602cb62937f4ad91f8ea",
+      "bytes": 343
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-14.txt",
+      "sha256": "2ef492a891f630e7fa5cdfcc2f3d5fb6f13c196f6e4f602cb62937f4ad91f8ea",
+      "bytes": 343
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-15.txt",
+      "sha256": "2ef492a891f630e7fa5cdfcc2f3d5fb6f13c196f6e4f602cb62937f4ad91f8ea",
+      "bytes": 343
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-16.txt",
+      "sha256": "fda750ecbe757ec8dc5a2cfdd2b201b604143debd178716e642d0ca03540f516",
+      "bytes": 6312
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-17.txt",
+      "sha256": "cf7eb241fcd33a91fe6b353f39bf5915734ba567bb911158adcbf3f39b451e01",
+      "bytes": 7053
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-2.txt",
+      "sha256": "3c293137f57eabb8611fa736b17e33937958e44b59778668971888262de7b321",
+      "bytes": 169
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-3.txt",
+      "sha256": "3c293137f57eabb8611fa736b17e33937958e44b59778668971888262de7b321",
+      "bytes": 169
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-4.txt",
+      "sha256": "3c293137f57eabb8611fa736b17e33937958e44b59778668971888262de7b321",
+      "bytes": 169
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-5.txt",
+      "sha256": "7423237a1ed2f62039bde140b2f8e3996d3243415721990bb974a6c2fb34974e",
+      "bytes": 190
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-6.txt",
+      "sha256": "ccc5781811fc7fd5ecea196d58ca6897d622efc95596fbe0ded3938bfeddaf27",
+      "bytes": 341
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-7.txt",
+      "sha256": "b3bac8541384f34237d616667173b8a8de4a28b0c4751bb149ab9d362b4bf35f",
+      "bytes": 155
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-8.txt",
+      "sha256": "ac8daf9271ce4e942b5a74f85685e7d1269792d56f8de1f00268466f6a808cf2",
+      "bytes": 312
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-c14n-9.txt",
+      "sha256": "ac8daf9271ce4e942b5a74f85685e7d1269792d56f8de1f00268466f6a808cf2",
+      "bytes": 312
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloped-dsa-c14n-0.txt",
+      "sha256": "95000f9b3f3008a726397299870571adb2c7738bd07a60c760ebd3d980057c1e",
+      "bytes": 61
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloped-dsa-c14n-1.txt",
+      "sha256": "e459bca46ebcfb755c74fbecae72007daf73f0523884bc814378bacc1fde02c9",
+      "bytes": 626
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloped-dsa.xml",
+      "sha256": "3039902d2ae4a37438779aa265f8c535b375f4773f55535eba9ecb9e90a4c092",
+      "bytes": 1701
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-b64-dsa-c14n-0.txt",
+      "sha256": "8f15fb6a6038c53b62925d4770e43dec13b17503b4cd5c1b1f391c4f798895e1",
+      "bytes": 600
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-b64-dsa.xml",
+      "sha256": "1e6e37fe90e6a50b9c7f202bf3a424731ee704839c4aebcb4eb6f7f3bc900a3b",
+      "bytes": 1600
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-dsa-c14n-0.txt",
+      "sha256": "883858b7bf28dbde1f03aa7343b938e3e79e8eb40c8be597de5dd4ad476d2f54",
+      "bytes": 81
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-dsa-c14n-1.txt",
+      "sha256": "0c73d720eea138922429dbbfc1c8c4c1d63d71e77eee09163eae2a96f9a4adce",
+      "bytes": 476
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-dsa.xml",
+      "sha256": "1ccebf4b576dbde32db6df2fea0e347c242639a871d0c8e516e63750e6afe4be",
+      "bytes": 1483
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1-40-c14n-0.txt",
+      "sha256": "883858b7bf28dbde1f03aa7343b938e3e79e8eb40c8be597de5dd4ad476d2f54",
+      "bytes": 81
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1-40-c14n-1.txt",
+      "sha256": "bbd2979a5530f47372b609cd44aa9167d8e195c66d35621f551417917b843763",
+      "bytes": 528
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1-40.xml",
+      "sha256": "81ba1abe409ae31dcd4883ce1eb02829d1c9d46058a02705ddda44c55482ef59",
+      "bytes": 652
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1-c14n-0.txt",
+      "sha256": "883858b7bf28dbde1f03aa7343b938e3e79e8eb40c8be597de5dd4ad476d2f54",
+      "bytes": 81
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1-c14n-1.txt",
+      "sha256": "a9f716edfc578eda9c5873ef8b22cbf1baa7e9c440f0add076136d1384890e94",
+      "bytes": 477
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-hmac-sha1.xml",
+      "sha256": "84c6e855276d6f4208178c98dd71b20d0393794cbb3d8036417f1a0d396a410c",
+      "bytes": 605
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-rsa-c14n-0.txt",
+      "sha256": "883858b7bf28dbde1f03aa7343b938e3e79e8eb40c8be597de5dd4ad476d2f54",
+      "bytes": 81
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-rsa-c14n-1.txt",
+      "sha256": "b75e0de3ff45dc259274aee9b1220254519bff425d5b678339dbfb2ef8d89603",
+      "bytes": 476
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-enveloping-rsa.xml",
+      "sha256": "4f032ab3c4b52575db68c6f1ffffbcdb6727d2cb07d92b4ca8aa505e73a1db5f",
+      "bytes": 1151
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-external-b64-dsa-c14n-0.txt",
+      "sha256": "d621f5ea756c355d04620d9f5fa9b0cb613c79fa053e2fe21420569e38b78153",
+      "bytes": 647
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-external-b64-dsa.xml",
+      "sha256": "916ae7a94c04b69216ffe726457dc0f3730cd194b18c222ec46edde265eebe0d",
+      "bytes": 1603
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-external-dsa-c14n-0.txt",
+      "sha256": "28d294ed29b391377b2df16e112e1373ad72c3d012a5a3903253e42dd246dcf8",
+      "bytes": 504
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-external-dsa.xml",
+      "sha256": "58d881e1285a369bed0998a554453f58ea41cae2efab2b53fca37f8f074b3602",
+      "bytes": 1470
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-keyname.xml",
+      "sha256": "e0db4ecd54cba5081245c01f554b370a2e9a9c1c6727b533160cfc56e4fd121d",
+      "bytes": 672
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-retrievalmethod-rawx509crt.xml",
+      "sha256": "4e6cf6398e8ebda494e8285476e6210d6e8e9b4644880ecb023a673d75080e67",
+      "bytes": 750
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-x509-crt-crl.xml",
+      "sha256": "33059f6259092d83753cad7a22a042e995abb84f5752b4d12732db4100c54cc9",
+      "bytes": 2514
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-x509-crt.xml",
+      "sha256": "d9cd35faaee77b5a1a8c35a4a6585193589545d9ad43e93b72efdf804af169ea",
+      "bytes": 2022
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-x509-is.xml",
+      "sha256": "a49aba13288ef1457a228450eda5165f271488215fddcb7a55322c6f4587f9c8",
+      "bytes": 927
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-x509-ski.xml",
+      "sha256": "d8f7e6b0ec851a284ca8f297c9de1b44cb7700b6601b774c456cf1a0f46312e6",
+      "bytes": 729
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature-x509-sn.xml",
+      "sha256": "65f083595e24601553b793cbf8549776bf4ae280a7133fa9f135d6f1a11678da",
+      "bytes": 797
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature.tmpl",
+      "sha256": "20c8c062bc2d3a93f2ae5bc4800c8edb03850a68b32eed78f3eaded903270369",
+      "bytes": 11503
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/signature.xml",
+      "sha256": "d1a562ad63d3a651e97073fecb6de1bfe96d4272479781692e192316ed7623a8",
+      "bytes": 13910
+    },
+    {
+      "path": "test/interop/merlin-xmldsig-twenty-three/xml-stylesheet-2005.html",
+      "sha256": "788d4e2d54ad9fa678abb072abc5c6509e1b71ed4b31295a9c8ea8f92bd8cedd",
+      "bytes": 13132
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/README.txt",
+      "sha256": "ef6eb17f6800e8117ff986360b3dcc38e9ff9aa4f66f43001c94ad3a47324426",
+      "bytes": 7519
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/crl.der",
+      "sha256": "659cf54c87ed3f0ace6052522bdd43aa654e7833d12501efbb088098952b70b7",
+      "bytes": 418
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/dsa-ca-cert.der",
+      "sha256": "8a54288b3d2791f307a0467f729441f52627b803f486576b57b409c73555ca62",
+      "bytes": 911
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/dsa-ca-cert.pem",
+      "sha256": "6639fd4a5d3e7c2edd8f63b51175076c83eb8a784a775a9b8c8181e10afc9559",
+      "bytes": 1289
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/dsa-cert.der",
+      "sha256": "9f959a7fc5dcb408f1adfc6463e5d80ac16b5439b1062679731c0e3eaf07f4a6",
+      "bytes": 915
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/dsa-cert.pem",
+      "sha256": "26733af1a15d95280a448901a67a7f64c67f3340b2791d9d1769fb748e1ad1bd",
+      "bytes": 1294
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/enc-dsa-key.der",
+      "sha256": "575abbe018a252fb885e3bfc98ac4a0cb1b09eec34eb045e49f2bcb493de9389",
+      "bytes": 374
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/enc-rsa-key.der",
+      "sha256": "bd7f349290af81d3c03c9e5a18766d826592da867db36d1818241e9f1941fafd",
+      "bytes": 678
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/rsa-ca-cert.der",
+      "sha256": "2868a5173a4efcc6c59c65a62d1fb8a936b3732eed545cdd41b6a3ec6544d5b9",
+      "bytes": 722
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/rsa-ca-cert.pem",
+      "sha256": "fdaadc60660794a5c3ace9c410f1fd4c69608654e23cffc87e2d5f0dd816e29d",
+      "bytes": 1034
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/rsa-cert.der",
+      "sha256": "af963db86bb4fea9475b13d71e42a1b311d6c0bd1256a58d42d1b26ffe2fb253",
+      "bytes": 724
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/certs/rsa-cert.pem",
+      "sha256": "f922dc9cf7e16909f3e0f70de15846d0bfee220209bfdab94a91c83eb96ad657",
+      "bytes": 1038
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/document-stylesheet.xml",
+      "sha256": "9a7029d293f01ed7c296ee822a05e3e35cb2c008f32b312c983987e9960b5e5f",
+      "bytes": 232
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/document.b64",
+      "sha256": "8c7dbfc1c404b32b4ef091439427e91a99f1114afcb557d7f23cb058f89169a4",
+      "bytes": 244
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/document.xml",
+      "sha256": "3bf386daa8dafe8b65435206b16da6d244c1d0ef5cd6d3e4b8539a37c08e1f22",
+      "bytes": 176
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/document.xsl",
+      "sha256": "2e4a1e3dd8000b244c20629b816e8b62d16d0b0040bf2b60acadb6c9337987b6",
+      "bytes": 819
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-big.xml",
+      "sha256": "c4c98004adeccb0b9d68f5f573cfe0bb8e37457a2a1b5d0dcb74088fdc59c8ee",
+      "bytes": 5217
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-dsa-detached.xml",
+      "sha256": "292ad9645a604d69baeb80da88e35be2692f36bc6b2b1c5e780feefaae097eb2",
+      "bytes": 2368
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-dsa-enveloped.xml",
+      "sha256": "a6ca37b274e3467e722806de8640a8bd7ece7b7005ee3aa2092fd6a0ce71c033",
+      "bytes": 2625
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-dsa-enveloping.xml",
+      "sha256": "12dc26a16837e7dac1140d37852040eba911d3929358c1e0a1d5a31556af616d",
+      "bytes": 2681
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-dsa-manifest.xml",
+      "sha256": "5099ffc805caead619854e33c8e472eb4f6533e47da98e8497155edf82548853",
+      "bytes": 2064
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-hmac-md5-c14n-enveloping.xml",
+      "sha256": "5db32cfdec32558a5f09e4ca6d596ceb25bb41b36ed7b02ac2f3df6ab276f631",
+      "bytes": 913
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-hmac-sha1-40-c14n-comments-detached.xml",
+      "sha256": "c517e44b15df28424984b7311b59812b40ae62b1bda63100eb952df871dd8342",
+      "bytes": 674
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-hmac-sha1-40-exclusive-c14n-comments-detached.xml",
+      "sha256": "33196c85f0eb219977f35b1df5bf2505efdac683d98927aefcc568fb103c8074",
+      "bytes": 665
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-hmac-sha1-exclusive-c14n-comments-detached.xml",
+      "sha256": "33d1f5bc9a325962dfc732b186016452e3de4c23f61902698e6686e9d05aeda2",
+      "bytes": 614
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-hmac-sha1-exclusive-c14n-enveloped.xml",
+      "sha256": "a05922d2efce773cb1c562388be55115b1dc3e1b38f33e704daa914425f52c16",
+      "bytes": 859
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached-b64-transform.xml",
+      "sha256": "f08ca26924ac0cc148a9e6f6cd395dc98a64de0fa6609a4fc565f03392351fb8",
+      "bytes": 1516
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached-xpath-transform.xml",
+      "sha256": "24561d8f31ae69c50e008d8f1b8d61778f1235cd8b3bba10957d3167b64205d5",
+      "bytes": 1701
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached-xslt-transform-bad-retrieval-method.xml",
+      "sha256": "6d923f8e7f31683773659e648970a3049cb6d72ffbdb413bf53e1a288eae8dfa",
+      "bytes": 1150
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached-xslt-transform-retrieval-method.xml",
+      "sha256": "1167f8cd7dfbe976e4c023717a4ed54865c19169810e1bf461efa8e5ff847030",
+      "bytes": 2210
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached-xslt-transform.xml",
+      "sha256": "a2dd2ef9b518869f4593943dbe4358f9a7e86d566eaa2fa270e67a7fe34fc5d3",
+      "bytes": 2406
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-detached.xml",
+      "sha256": "4a816ebcf2e8081911e3c27c3c2b3de6e7fd44e4451d79413e1e50ce9bd97ae7",
+      "bytes": 2232
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-enveloped-bad-digest-val.xml",
+      "sha256": "52993d10859c7b694f5c1565503eefa6761827424b0f2f2fe15dc17000d70060",
+      "bytes": 2489
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-enveloped-bad-sig.xml",
+      "sha256": "f48e74ef9db74dc80e4a67338dbc219df691426db5ffd5f6f3ea95f3d6c7f8d4",
+      "bytes": 2638
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-enveloped.xml",
+      "sha256": "b5a5490998c34833cf5c25c23cfef141306894ee4fbf73ba0a0e100ed4008ed1",
+      "bytes": 2489
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-enveloping.xml",
+      "sha256": "d8b50a4241a44f9f09d84f94ab54b1f51ffd250b9f143f33df237455abb8ecbc",
+      "bytes": 2545
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data-cert-chain.xml",
+      "sha256": "cc1cb0ae84cda7a2cc2b9e3007e17a5363d5bbe8f917a8fe649847e5b84593ad",
+      "bytes": 3388
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data-cert.xml",
+      "sha256": "5fc868f72d83ebc70a5e72b08f0da589f9a5e2157629c6834dbf41debd90cff2",
+      "bytes": 2379
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data-issuer-serial.xml",
+      "sha256": "b1b2d72bcd23fdb048a782883c4483946982c58b1bf6416a438f32925a78d29e",
+      "bytes": 1588
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data-ski.xml",
+      "sha256": "4b4c2dcc6c93358fb3b15ada5e45737352ae6a256706e4a6df9402a0269dde0a",
+      "bytes": 1423
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data-subject-name.xml",
+      "sha256": "70ec9a497cfb2d0ed2bff7e1753b424c65f5b4a75f8850d4ac00a8c8854354de",
+      "bytes": 1493
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest-x509-data.xml",
+      "sha256": "ce52727067b244b6b609b123ec7d5af7e1d3944b16129c15e5dbfde5afdefede",
+      "bytes": 4383
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-manifest.xml",
+      "sha256": "48dfe0ec2cfe06f7545c5345ebfca8fdbeda2dd5e12ed1d6b5564d2192cf8f04",
+      "bytes": 1639
+    },
+    {
+      "path": "test/interop/phaos-xmldsig-three/signature-rsa-xpath-transform-enveloped.xml",
+      "sha256": "9b18f711bdbe8c7652c1d5f5384ce419ec2558e54299982e084e3e7b57d4a7dc",
+      "bytes": 2692
+    },
+    {
+      "path": "test/interop/pyXMLSecurity/SAML_assertion1.xml",
+      "sha256": "a05c3684f82a1e13508832b686b5e6983f63feb8dd515bde77689e0f4ce7825b",
+      "bytes": 2647
+    },
+    {
+      "path": "test/interop/pyXMLSecurity/SAML_assertion_sha256.xml",
+      "sha256": "3021f87c517bac39851af513887d520d9345697a8887ae649e611604c0e5f995",
+      "bytes": 2671
+    },
+    {
+      "path": "test/interop/pyXMLSecurity/edugain.xml",
+      "sha256": "a51a2aabbeaee9462280e7ef0a1ece84bfc5d25d1b2f285a3cbcfe3f764a49e9",
+      "bytes": 8257
+    },
+    {
+      "path": "test/interop/pyXMLSecurity/test.pem",
+      "sha256": "5a07351ad22381c495e11b950ea123e05c47c41328dae631a733b98ac2a750f2",
+      "bytes": 993
+    },
+    {
+      "path": "test/interop/soap/ca.pem",
+      "sha256": "f2eb0ad9ccdd77d50d993fed9f2a83d56ecac4ebf0493419a8fabc79045d54fd",
+      "bytes": 2069
+    },
+    {
+      "path": "test/interop/soap/request.xml",
+      "sha256": "50ae89264ee6958facf2671c094077a87ad9e4a0ba0bde40aefc4e4772815e38",
+      "bytes": 4704
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/examples/client.pem",
+      "sha256": "a2b50f9585812a24225754ea2cab5ba182c443f1e2ed8e849ce06dae804ead0d",
+      "bytes": 1868
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/examples/sample.js",
+      "sha256": "97c3facb1672ff091f08fbddff8d9e9b78ca490406dc6001f44dfb38a1dee372",
+      "bytes": 835
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/examples/server_public.pem",
+      "sha256": "1d452ac696720d7243ad1c2f4477e8127279ef0883a1b0443078dc308ce062c7",
+      "bytes": 672
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/examples/signature.js",
+      "sha256": "cff211a818b8f6a63db437290277aa93fd373ac4780db7072a728ed18100afd3",
+      "bytes": 1484
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/test/unit/client/files/invalid wss resp - changed content.xml",
+      "sha256": "dee23ad1a25acbc2cfa23849fbee400347fe88a0fe38c25a6ebbb591af76e678",
+      "bytes": 2049
+    },
+    {
+      "path": "test/interop/ws-security/ws.js/test/unit/client/files/valid wss resp.xml",
+      "sha256": "e12d297f34ffae59487accd2ab4a453e48c9a2e3b18d21ea03e9e91616522cdc",
+      "bytes": 2048
+    },
+    {
+      "path": "test/interop/xml-crypto/signature_with_inclusivenamespaces.pem",
+      "sha256": "24dc42bef8d6cf5379d723b49e657deb116538e177f39d35af579707422f7084",
+      "bytes": 966
+    },
+    {
+      "path": "test/interop/xml-crypto/signature_with_inclusivenamespaces.xml",
+      "sha256": "c22bb8cdbdd8fb2db3770dfce50001b75f98a0fc8b7a19540b9fc191e2a2fb43",
+      "bytes": 3718
+    },
+    {
+      "path": "test/interop/xml-crypto/windows_store_certificate.pem",
+      "sha256": "cdd24eacda6d58e79241c7967b0d9a6fe9482b9340ff23d617f13ce036aa4f30",
+      "bytes": 1374
+    },
+    {
+      "path": "test/interop/xml-crypto/windows_store_signature.xml",
+      "sha256": "163ebe95e3baae6f335137cb997fb5b5b72dd001d5c5c4b22dbccb3052291fb8",
+      "bytes": 1509
+    },
+    {
+      "path": "test/interop/xml-crypto/wsfederation_metadata.pem",
+      "sha256": "c0102f3d44c21c4b9f890e7646778fe28a1908e04aee98d6cf74701ff6aefdb3",
+      "bytes": 1062
+    },
+    {
+      "path": "test/interop/xml-crypto/wsfederation_metadata.xml",
+      "sha256": "65b6e2382fa77f69aed15e1a1c154a131330f283000919a3e0af0db5dca9f0c1",
+      "bytes": 18176
+    },
+    {
+      "path": "test/issues/issue_284_expired_cert.xml",
+      "sha256": "7e72349c87ed87a7e270ae5e42538646248aba85d53ba1a8c7cc7900b43a97c7",
+      "bytes": 6368
+    },
+    {
+      "path": "test/rfc3161.txt",
+      "sha256": "39fd17644ff2d654bc83814a78b1c5b5e7517f496741f34ead5064943eb98240",
+      "bytes": 54585
+    },
+    {
+      "path": "test/short-id-comments.xml",
+      "sha256": "864961269ffc2863041607af835be44103af81c15697cb437361e30a7e36f742",
+      "bytes": 723
+    },
+    {
+      "path": "test/test.py",
+      "sha256": "b5d2839ab4a75dbfe0fec0f27bfab11c47ad0985b67fc062f2bbe058b70f0804",
+      "bytes": 116171
+    },
+    {
+      "path": "test/test_modern_interop.py",
+      "sha256": "12a8fb2341ebb07b0e88371b0371dc48adf5447fbb1cccff47cad58cb0615d8f",
+      "bytes": 5158
+    },
+    {
+      "path": "test/wsse_keyinfo.xml",
+      "sha256": "cee525b4c99e0c8326635dd4f93edff63f3db4439cd0e0333e894d5d9ffb23e1",
+      "bytes": 426
+    },
+    {
+      "path": "test/xades/11068_signed.xml",
+      "sha256": "8a9f0b455e0da5bf3874a4984a995c8480f10443145591c2ce70a8584ec7ecac",
+      "bytes": 215150
+    },
+    {
+      "path": "test/xades/Signature-X-CZ_SEF-4.xml",
+      "sha256": "cfc5beef977f3ef2ace49dd4256e88992999f9738e93e7c4a865454002edecd7",
+      "bytes": 16108
+    },
+    {
+      "path": "test/xades/Signature-X-CZ_SEF-5.xml",
+      "sha256": "501a3b78a947bcaf7e56075947cfeeb8c5c96ff61e2036da0daf6ced054223dc",
+      "bytes": 159609
+    },
+    {
+      "path": "test/xades/Signature-X-HU_POL-3.xml",
+      "sha256": "272c7812a34144cf4725513e5d7814e230e44774126c180bb39e6c79bf19ea7e",
+      "bytes": 30980
+    },
+    {
+      "path": "test/xades/Signature-X-SK_DIT-1.xml",
+      "sha256": "252b0ee8478e0c6438cee8161187a220e772761c1d6b1066453bd45fa508d9fa",
+      "bytes": 11817
+    },
+    {
+      "path": "test/xades/Signature-X-UK_ASC-2.xml",
+      "sha256": "7808ae95660f970471e8c0ce139c541543b92c6f1d6ccb5d481070056486afbc",
+      "bytes": 16343
+    },
+    {
+      "path": "test/xades/TEST_S1a_C1a_InTL_VALID.xml",
+      "sha256": "f47496e25c1b2edb1ab21364c8ba5176df579667fd709751af7c0102e78bb92c",
+      "bytes": 11563
+    },
+    {
+      "path": "test/xades/X_AT_SIT_1.xml",
+      "sha256": "294f9a681671af9c513baedc872b88b4a392bee5534ad98da639c3ef798294f5",
+      "bytes": 4098
+    },
+    {
+      "path": "test/xades/dk_tl-sn21.xml",
+      "sha256": "6cf254c9687e33630211055805a70b8aabee8f0382330bfa9b5ae075bcffd767",
+      "bytes": 36933
+    },
+    {
+      "path": "test/xades/document.signed.bes.ptcc.xml",
+      "sha256": "60c3eaff6a7004ab0d0dee317de638869a0c80a54bafa1f5968e6c0b01276a6a",
+      "bytes": 6751
+    },
+    {
+      "path": "test/xades/document.signed.c.xml",
+      "sha256": "1b757c2ffcfb8e0811926a1ec07f6ee26fb6d1ec67c5e23733d64cbab761e5d2",
+      "bytes": 14688
+    },
+    {
+      "path": "test/xades/document.verified.c.xl.xml",
+      "sha256": "f46a941d164392b356c312cd34dd6483fbf8abdb9fdba0c4162b4d13ea3c7409",
+      "bytes": 23794
+    },
+    {
+      "path": "test/xades/dss-signed-altered-signedPropsRemoved.xml",
+      "sha256": "e4f8b7de169136fd2fff39415e6e753ef53ad2cbbcedebb13d44eb76b14e9bad",
+      "bytes": 5139
+    },
+    {
+      "path": "test/xades/dss-signed.xml",
+      "sha256": "5b8b3f4a9ed2d83905f42339fe2f2455679d99ff392c182d57ca91a20ab28bb2",
+      "bytes": 5512
+    },
+    {
+      "path": "test/xades/dss1788-original.xml",
+      "sha256": "719581d34f4a7b8d30eaf37c7f38044f7172cf76fe01e4ac0aaaca1bdff32f21",
+      "bytes": 43574
+    },
+    {
+      "path": "test/xades/factura_ejemplo2_32v1.xml",
+      "sha256": "a2eb582eb4501d0cab6257dc39dfcff3e697dc8c49abcb3417acb9edf7b15497",
+      "bytes": 13083
+    },
+    {
+      "path": "test/xades/nonconformant-Signature-X-ES-100.xml",
+      "sha256": "207db6a7ef5cdb41e19bb8d23b5ffcbdefd1aff6ef3fa77e2786635d66186a86",
+      "bytes": 47721
+    },
+    {
+      "path": "test/xades/nonconformant-Signature-X-ES-103.xml",
+      "sha256": "b2ab53f2f9479534a89d0110830996bcc96e54d18a2b64ad46b1d4dad85ecb1d",
+      "bytes": 47715
+    },
+    {
+      "path": "test/xades/nonconformant-X_BE_CONN_10.xml",
+      "sha256": "eef4d2e6429426fc9f9295db7db6da9ab2cdd1d8c28fce7b80b3584737a29266",
+      "bytes": 6704
+    },
+    {
+      "path": "test/xades/nonconformant-dss-2293.xml",
+      "sha256": "63b7a76e0dbbc03175fb861687a8d1c8f06a21b3f4d2f11f3b7a255c545aca53",
+      "bytes": 6964
+    },
+    {
+      "path": "test/xades/nonconformant-dss-signed-altered-refRemoved.xml",
+      "sha256": "6bc693baa6efd520967f8000b43ccc65822c3a641a89a46f2aa776fcbfa9c13d",
+      "bytes": 5134
+    },
+    {
+      "path": "test/xades/nonconformant-dss1770.xml",
+      "sha256": "e60276e03f16a705b63ddd490cf49afdd03a34e87d00c1d785ad1716cb8a78a5",
+      "bytes": 6026
+    },
+    {
+      "path": "test/xades/nonconformant-sellosFNMT-XAdES_A.xml",
+      "sha256": "0d2f1a556514b922e6514909366ed3a3adf54081df582b36edc46551a53bfa53",
+      "bytes": 70494
+    },
+    {
+      "path": "test/xades/nonconformant-xades-extended-epes-sigPolStore-noDigest.xml",
+      "sha256": "b9449d04773503b3cf52c81e0d8d9f40d5ab37c6e06fe78f04c036adc89a5601",
+      "bytes": 35123
+    },
+    {
+      "path": "test/xades/nonconformant-xades-ocsp-not-embeds-certs.xml",
+      "sha256": "57a5c27d49b03532ec703bfc32e60e8b5946ef6002c4964e35a8600fdba35b5e",
+      "bytes": 15482
+    },
+    {
+      "path": "test/xades/nonconformant-xades-sign-cert-v1-wrong-serialnumber.xml",
+      "sha256": "72e2e4029660e51b3cf3e858430626f1ed1ea65389d51b09578b115e0a40a1f1",
+      "bytes": 5752
+    },
+    {
+      "path": "test/xades/sig-with-orphan-ocsp-ref.xml",
+      "sha256": "321c0679635a50f11566978364f5b930e93f84ee1682e3adc3ad6ec3ffc9ce2f",
+      "bytes": 25564
+    },
+    {
+      "path": "test/xades/signature_property_signed.xml",
+      "sha256": "349979b4365e5f12d56ae2d325a0f5b31f66945ad15a53da9486b385ec0966e0",
+      "bytes": 6337
+    },
+    {
+      "path": "test/xades/valid-xades-policyId-newlines.xml",
+      "sha256": "f3f3c80b4f2cc18dea30f04d1b9e6a36f89101190b41fb9190fb074944c00d89",
+      "bytes": 10496
+    },
+    {
+      "path": "test/xades/xades-attr-authorities-values.xml",
+      "sha256": "62bbb2c2e83096ce53de78673e960e41047d0fba7c9c68cfdee6294eb60cb7da",
+      "bytes": 31749
+    },
+    {
+      "path": "test/xades/xades-counter-signature-injected.xml",
+      "sha256": "f6cf5f176be20915356f70e7ab4ee0682c9486de1b437d279c7e1c751b0f8739",
+      "bytes": 13313
+    },
+    {
+      "path": "test/xades/xades-ecc-brainpool.xml",
+      "sha256": "c3da30e4252d47b27a04b333defb1be70db27e9babeb8be136c945c4afd12674",
+      "bytes": 381352
+    },
+    {
+      "path": "test/xades/xades-extended-epes-with-sigPolStore.xml",
+      "sha256": "c9696b6883508d7274227d2ae4b2b5bf8c851bd4f5bd2041ed1f57679af4f9ac",
+      "bytes": 35884
+    },
+    {
+      "path": "test/xades/xades-extended-epes.xml",
+      "sha256": "2c3f8ee653a6ee0f118fff1472ed15f5c42048883e4c561485ea113b281a862a",
+      "bytes": 5788
+    },
+    {
+      "path": "test/xades/xades-extended-short-a.xml",
+      "sha256": "b389305df1e9536e5bcb33e015dccd5daa1b1e9d95db0eb6613266a9a6bd531c",
+      "bytes": 21226
+    },
+    {
+      "path": "test/xades/xades-extended-t.xml",
+      "sha256": "b4876b64715331ee4d4759035ad7fc7495b242a82f41bfb46ccaad1b4315c973",
+      "bytes": 9613
+    },
+    {
+      "path": "test/xades/xades-extended-xl.xml",
+      "sha256": "1ced95a154ce112ef68c0728d6e42eac5c9c8c480624159c9d243065877c832f",
+      "bytes": 78108
+    },
+    {
+      "path": "test/xades/xades-fake-counter-signature.xml",
+      "sha256": "e9765c3b99e2d4fb0572ed507001c00e76a0ad6023417ce0cd4caded27bdda5d",
+      "bytes": 11706
+    },
+    {
+      "path": "test/xades/xades-level-x-double-sigAndRefsTst-refsOnlyTst.xml",
+      "sha256": "4083266f85f704224045baddac1540687fc6f31377a88047d67183d160518680",
+      "bytes": 28006
+    },
+    {
+      "path": "test/xades/xades-lt-with-expired-ocsp-responder.xml",
+      "sha256": "61d53a31920f8990c8d6d6636cc91e0a4ee274a77da2e0f29cf83ce4187e856c",
+      "bytes": 15511
+    },
+    {
+      "path": "test/xades/xades-lta-valid.xml",
+      "sha256": "d6ba7c610b283e8ccd8a0161081bc702c8ce31a1268369c2899a7c7c25cb6038",
+      "bytes": 21313
+    },
+    {
+      "path": "test/xades/xades-lta-with-additional-cert-in-keyinfo.xml",
+      "sha256": "8d4b971aa2cf01b565e065c63574b56b7f8cd2d81b5bb4510dca97073a87eb11",
+      "bytes": 23522
+    },
+    {
+      "path": "test/xades/xades-ocsp-before-cert-validity.xml",
+      "sha256": "291f6eff54c1444eca11ea62b384828d2bb1fe36758ca51f4b2850dbcde0dac6",
+      "bytes": 21325
+    },
+    {
+      "path": "test/xades/xades-sigPolicy-with-SPDocSpecification.xml",
+      "sha256": "408b68f06fa4ba2d46c1a69766b46e94c2e77a884caa30232a836a0db8680c5f",
+      "bytes": 6723
+    },
+    {
+      "path": "test/xades/xades-sign-cert-v2-wrong-digest.xml",
+      "sha256": "b51403962628c8182e5579d04f54a350def33246d1b15811a9f3f55fd04fee02",
+      "bytes": 5664
+    },
+    {
+      "path": "test/xades/xades-sign-cert-v2-wrong-issuer-serial.xml",
+      "sha256": "597177d652553756c87db5132f7dccd866a93c8053fda2c2b8b3b34abe1bef20",
+      "bytes": 5632
+    },
+    {
+      "path": "test/xades/xades-unsupported-signature-algorithm.xml",
+      "sha256": "1276ff36202833f53b57d8fe912e4466f35976cd6238c588a4c9cacdc8d49464",
+      "bytes": 5719
+    },
+    {
+      "path": "test/xades/xades-with-enveloped-manifest.xml",
+      "sha256": "ac569e1830b8e914f627263b4a664a0b3815c74ef16ca4b3ea6562175ac482ed",
+      "bytes": 6502
+    },
+    {
+      "path": "test/xades/xades-with-manifest-with-object-reference.xml",
+      "sha256": "84f63ea66fec04e8208c95da1b2b9a999883c22ba51475f7bd046a1e27b2ac4e",
+      "bytes": 6272
+    },
+    {
+      "path": "test/xades/xades-with-multiple-alldatatimestamps.xml",
+      "sha256": "02762bbae0abf75bb4469ceb094c2d4b51a1230ade17756b8957bc7a0eb0a852",
+      "bytes": 13116
+    },
+    {
+      "path": "test/xades/xades-with-multiple-archivetimestamps.xml",
+      "sha256": "6875ce57a4393fa8cde73c9917ea5e78b127c5588a89a96ef29353c497c5bddb",
+      "bytes": 23622
+    },
+    {
+      "path": "test/xades/xades-with-multiple-signaturetimestamps.xml",
+      "sha256": "588cc4e6e00176e532c3304cba6c8f18426a4cc16d4e4879962cc5bb46f31fb8",
+      "bytes": 15634
+    },
+    {
+      "path": "test/xades/xades-with-spUserNotice-refs.xml",
+      "sha256": "7b53fa8e8b198eda4dd4396251c0b13aa0c571ddec3734f3dd148c3ace445264",
+      "bytes": 6805
+    },
+    {
+      "path": "test/xades/xades-wrong-sign-cert-digest.xml",
+      "sha256": "1296ec75dd6fe2f38cb0a97e41a0bdfa9e16a2de75267f6b69cf1d51742a714a",
+      "bytes": 5705
+    },
+    {
+      "path": "test/xades/xades-x-level-v2-wrong-sigAndRefsTst-type.xml",
+      "sha256": "2b5988db5ea65840c010a799dcabdbf7fbf150ace0a9fa25c665a2978e9dbb50",
+      "bytes": 15736
+    },
+    {
+      "path": "test/xades/xades-x-level-v2.xml",
+      "sha256": "8cc8f5506946240087cf260729b35c1d58bb32b105ad68a50e2b168e95d5a830",
+      "bytes": 16543
+    },
+    {
+      "path": "test/xades/xades-x-level-wrong-sigAndRefsTstVersion.xml",
+      "sha256": "d76a3e36523a91700a868748732f3a2be5ddd11e9a5033e4e243bf16325aba4b",
+      "bytes": 15833
+    },
+    {
+      "path": "test/xades/xades-x-level.xml",
+      "sha256": "33dadd6de402f233081ed11b917a4c83353aca96016328e5d31ca2c4af2b5e11",
+      "bytes": 15772
+    }
+  ],
+  "no_postrun_product_changes": true
+}

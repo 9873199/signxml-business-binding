@@ -1,0 +1,95 @@
+{
+  "uid": 1742,
+  "run_id": "uf-20261112-new15-xml-retry-2",
+  "reviewed": true,
+  "reviewer": "Codex primary reviewer",
+  "frozen_trace_sha256": "88ba5f9e7bb847f2a6972b5bf2f30ae3e8ace46e5560a4b7390820d2424b01c8",
+  "revision": "acceptance-r1",
+  "product_modules": [
+    "signxml",
+    "signxml.verifier"
+  ],
+  "support_files": [
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\xml-independent-tests-r3.py",
+      "path": "test_xml_binding.py",
+      "sha256": "faa704d6fe68b0173491b0db8620442de367c18d9550872da8be307b1429ecc1"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\xml-reference-tests.py",
+      "path": "test_xml_references.py",
+      "sha256": "84478caa97558648b4d714c673e0fa9fe3da22f65dcffe446aee83bf85821cec"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\xml-demo.py",
+      "path": "xml-demo.py",
+      "sha256": "fcc46ab4a70db311fc4423562d0914f9a06c4cab66606297f52944e27011a250"
+    }
+  ],
+  "commands": [
+    {
+      "name": "binding-checks",
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-o",
+        "addopts=",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "{verification}/test_xml_binding.py",
+        "{verification}/test_xml_references.py",
+        "--basetemp",
+        "{verification}/tmp-binding"
+      ]
+    },
+    {
+      "name": "model-feature-tests",
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-o",
+        "addopts=",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "test/test.py::TestExpectedSignedElement",
+        "--basetemp",
+        "{verification}/tmp-model"
+      ]
+    },
+    {
+      "name": "compatibility",
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-o",
+        "addopts=",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "test/test.py",
+        "--basetemp",
+        "{verification}/tmp-upstream"
+      ],
+      "timeout": 300
+    },
+    {
+      "name": "runtime-demo",
+      "argv": [
+        "{python}",
+        "-B",
+        "{verification}/xml-demo.py"
+      ]
+    }
+  ]
+}

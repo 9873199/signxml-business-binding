@@ -1,0 +1,323 @@
+{
+  "created": "2026-11-13T16:00:46+08:00",
+  "reviewed": true,
+  "reviewer": "Codex primary agent, AI-assisted",
+  "uid": 1742,
+  "frozen_commit": "163f81e3d8baf50adf20b19da1014656d352eb52",
+  "native_trajectory_sha256": "88ba5f9e7bb847f2a6972b5bf2f30ae3e8ace46e5560a4b7390820d2424b01c8",
+  "files": [
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\freeze.json",
+      "path": "freeze.json",
+      "sha256": "217a6a38e64784abbe7227d03b454ae9bd27cd0218b7dd5f7ced189209e2dce0"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\freeze-audit.json",
+      "path": "freeze-audit.json",
+      "sha256": "47dc3fc3f80e41ec32d2a10fe76cf398e21906569e74dbcad521bdc19a0b5a49"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\environment-reviewed.json",
+      "path": "environment-reviewed.json",
+      "sha256": "885964ee92b55a0de62c69b3ecc5805196639c9d1326573147fe70df4cb31cbc"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\evidence-map.json",
+      "path": "evidence-map.json",
+      "sha256": "a65bd07d6c87aa6431f405a6b9d6c6105c4a009734d19512dd538326167a45a9"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\model-final-answer.txt",
+      "path": "model-final-answer.txt",
+      "sha256": "aeba127647374fd5ff9c3aa8fa40d080a404be377ca1c60a2b5dd294f12b92bd"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\test-results.json",
+      "path": "test-results.json",
+      "sha256": "2e06fd8d6654412dbdc36f6a9a7c81b272d3056da31b69b663c7b378f6b08cb5"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\evaluation-qc.json",
+      "path": "evaluation-qc.json",
+      "sha256": "fd1f3b663baf03f0cb8f9e1e50b2262c6c0975c4a59c363e17792a25ec99b320"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\actual-import.json",
+      "path": "verification/acceptance-r1/actual-import.json",
+      "sha256": "a8a27fd172274cfb280cf6935fcc8f78c3e88a9cd3989b38c54c6bc7d4fc3324"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\actual-import.stderr.log",
+      "path": "verification/acceptance-r1/actual-import.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\actual-import.stdout.log",
+      "path": "verification/acceptance-r1/actual-import.stdout.log",
+      "sha256": "c282569efbf2ea17af60b38796928ae87921afb41313dbf48f1e47ada35ba5f1"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\binding-checks.json",
+      "path": "verification/acceptance-r1/binding-checks.json",
+      "sha256": "c01678ccba7161a839677c49ef2574ac07b057b0f26cc89152d87d9cd269598f"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\binding-checks.stderr.log",
+      "path": "verification/acceptance-r1/binding-checks.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\binding-checks.stdout.log",
+      "path": "verification/acceptance-r1/binding-checks.stdout.log",
+      "sha256": "8171d692ac6b456ae2fc3931fc211f8a270debf342e4fdcf8e8e43d614957866"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\compatibility.json",
+      "path": "verification/acceptance-r1/compatibility.json",
+      "sha256": "f1a0a231d0afd60bc50c388bcd642d840665badb58c498f6b12c72ab6700912b"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\compatibility.stderr.log",
+      "path": "verification/acceptance-r1/compatibility.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\compatibility.stdout.log",
+      "path": "verification/acceptance-r1/compatibility.stdout.log",
+      "sha256": "f680da3b7f0d0dff60c0fd8d195a49351f2cccccd97c11dc3f2adcac6b5137ce"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\dependency-lock.json",
+      "path": "verification/acceptance-r1/dependency-lock.json",
+      "sha256": "d06f53a0938e026b5a67cd50065e1c0559bf2218266b7e7f953228beae6f86d4"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\dependency-lock.stderr.log",
+      "path": "verification/acceptance-r1/dependency-lock.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\dependency-lock.stdout.log",
+      "path": "verification/acceptance-r1/dependency-lock.stdout.log",
+      "sha256": "7e4fc3b93e3ea69b0bd63297350c17ba45ca2ca25bff62562bd63461b201b52c"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\model-feature-tests.json",
+      "path": "verification/acceptance-r1/model-feature-tests.json",
+      "sha256": "acb9c97ff4ecfa12405885627ee581bbfe760069b309db32ffebb4882ba7af22"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\model-feature-tests.stderr.log",
+      "path": "verification/acceptance-r1/model-feature-tests.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\model-feature-tests.stdout.log",
+      "path": "verification/acceptance-r1/model-feature-tests.stdout.log",
+      "sha256": "ef4dcd917c1da8a7e8e0b91dd32f3153a7abc1871e6620fc9cbfb2d110000bae"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\replay-proof.json",
+      "path": "verification/acceptance-r1/replay-proof.json",
+      "sha256": "a3b3a562d068fe83a4d4431c50a0b11431cb0234e2765ad42f8f318596984e73"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\reviewed-spec.json",
+      "path": "verification/acceptance-r1/reviewed-spec.json",
+      "sha256": "8870dd857835020ca9d37d4a10ef3882d36c0c8bdb064d8bd75eb29e8d76dd6b"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\runtime-demo.json",
+      "path": "verification/acceptance-r1/runtime-demo.json",
+      "sha256": "e5d65de9116caa0a01dd9cf4c830aacf07f68da45508d7bf5a14640062c0ef08"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\runtime-demo.stderr.log",
+      "path": "verification/acceptance-r1/runtime-demo.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\runtime-demo.stdout.log",
+      "path": "verification/acceptance-r1/runtime-demo.stdout.log",
+      "sha256": "2303b33c513a1880b9b09b958dcf2274fc94d3629cd65735b3b4371dabcb6ec7"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\test_xml_binding.py",
+      "path": "verification/acceptance-r1/test_xml_binding.py",
+      "sha256": "faa704d6fe68b0173491b0db8620442de367c18d9550872da8be307b1429ecc1"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\test_xml_references.py",
+      "path": "verification/acceptance-r1/test_xml_references.py",
+      "sha256": "84478caa97558648b4d714c673e0fa9fe3da22f65dcffe446aee83bf85821cec"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r1\\xml-demo.py",
+      "path": "verification/acceptance-r1/xml-demo.py",
+      "sha256": "fcc46ab4a70db311fc4423562d0914f9a06c4cab66606297f52944e27011a250"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\acceptance-contract-review.json",
+      "path": "verification/acceptance-r2/acceptance-contract-review.json",
+      "sha256": "2bcddff5016e0e08e258f182b2b1cc9b82b3c572972445bb047a964b818993d4"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\actual-import.json",
+      "path": "verification/acceptance-r2/actual-import.json",
+      "sha256": "7f25b52ed2973b935e1d1f15172f2f361151b59e9174b392a34b3e4a46ee86fe"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\actual-import.stderr.log",
+      "path": "verification/acceptance-r2/actual-import.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\actual-import.stdout.log",
+      "path": "verification/acceptance-r2/actual-import.stdout.log",
+      "sha256": "1814720beac662bf928e4fc6590fab8202b059387a46e0d601a83722e2db130c"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\binding-checks.json",
+      "path": "verification/acceptance-r2/binding-checks.json",
+      "sha256": "c30111cf792b2c1cfb505587b25e62f5ba901a8ef4ff6108f692b293c99dc518"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\binding-checks.stderr.log",
+      "path": "verification/acceptance-r2/binding-checks.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\binding-checks.stdout.log",
+      "path": "verification/acceptance-r2/binding-checks.stdout.log",
+      "sha256": "5337f1b027e7a0d26c5c8d98459a183aa8a7ae76b0bb4e915393429ec79267c7"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\compatibility.json",
+      "path": "verification/acceptance-r2/compatibility.json",
+      "sha256": "9a306fa6695776d205e5040235ff312dbe69127cd2fe5f48fc949dbc488a1df9"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\compatibility.stderr.log",
+      "path": "verification/acceptance-r2/compatibility.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\compatibility.stdout.log",
+      "path": "verification/acceptance-r2/compatibility.stdout.log",
+      "sha256": "0496630f8da71787bbc195f9c138f303cec08ec8dcff67326926b4b3100c1030"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\dependency-lock.json",
+      "path": "verification/acceptance-r2/dependency-lock.json",
+      "sha256": "d8e980103dab2d411bdae84d943705d2ac5ea533663b35278bc7d6c28f0f5b42"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\dependency-lock.stderr.log",
+      "path": "verification/acceptance-r2/dependency-lock.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\dependency-lock.stdout.log",
+      "path": "verification/acceptance-r2/dependency-lock.stdout.log",
+      "sha256": "7e4fc3b93e3ea69b0bd63297350c17ba45ca2ca25bff62562bd63461b201b52c"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\model-feature-tests.json",
+      "path": "verification/acceptance-r2/model-feature-tests.json",
+      "sha256": "4764b4e66c7535182476d151810ef7a4b8208f0a27daef7977ef53867c452768"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\model-feature-tests.stderr.log",
+      "path": "verification/acceptance-r2/model-feature-tests.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\model-feature-tests.stdout.log",
+      "path": "verification/acceptance-r2/model-feature-tests.stdout.log",
+      "sha256": "84b39264f433bba4fe3e4f2ad802315a37f57b5377b91e4c2a6c0e9c78c397e3"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\replay-proof.json",
+      "path": "verification/acceptance-r2/replay-proof.json",
+      "sha256": "b8c2f5df06be2a76bdcdc6bb8b47c1bf94883fee542acd3a07eaf4edac1a0baa"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\reproduction-notes.md",
+      "path": "verification/acceptance-r2/reproduction-notes.md",
+      "sha256": "df793ddf4121e53fe7f146ea9e0d1f3ab07b88c510f896d43957c11df16bc575"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\reviewed-spec.json",
+      "path": "verification/acceptance-r2/reviewed-spec.json",
+      "sha256": "d6e571b2122c24a801e5a5fc4c7d34c8e3a9b942f68dde2734d101eddf951ab6"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\runtime-demo.json",
+      "path": "verification/acceptance-r2/runtime-demo.json",
+      "sha256": "59fd96304d877f8deb12ed9ef0954a01cbfdd5fc6cb201ca7c61d16068ccb299"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\runtime-demo.stderr.log",
+      "path": "verification/acceptance-r2/runtime-demo.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\runtime-demo.stdout.log",
+      "path": "verification/acceptance-r2/runtime-demo.stdout.log",
+      "sha256": "2303b33c513a1880b9b09b958dcf2274fc94d3629cd65735b3b4371dabcb6ec7"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\runtime-requirements.txt",
+      "path": "verification/acceptance-r2/runtime-requirements.txt",
+      "sha256": "78eaabbc44dc46ab97b8eb97637bff95aa7c467db85853bdd02c5e28206427d8"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\test_xml_binding.py",
+      "path": "verification/acceptance-r2/test_xml_binding.py",
+      "sha256": "faa704d6fe68b0173491b0db8620442de367c18d9550872da8be307b1429ecc1"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\test_xml_contract.py",
+      "path": "verification/acceptance-r2/test_xml_contract.py",
+      "sha256": "7a444f997695fda808d19ed4ee299893a57527f9a0f99a8cd2bca7ad8b905640"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\test_xml_references.py",
+      "path": "verification/acceptance-r2/test_xml_references.py",
+      "sha256": "84478caa97558648b4d714c673e0fa9fe3da22f65dcffe446aee83bf85821cec"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\acceptance-r2\\xml-demo.py",
+      "path": "verification/acceptance-r2/xml-demo.py",
+      "sha256": "fcc46ab4a70db311fc4423562d0914f9a06c4cab66606297f52944e27011a250"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\actual-commands.json",
+      "path": "verification/recorded-runtime-r1/actual-commands.json",
+      "sha256": "ac97118281daba5e2860cf3830b6493c8c21d6eefa40ab15f5bb86a2713be103"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\binding-checks-output.log",
+      "path": "verification/recorded-runtime-r1/binding-checks-output.log",
+      "sha256": "b845db29b9ff7ce5e0987da27ccdabd845463cea8ce8adbc7350662c3e14f50e"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\invoice-demo-output.log",
+      "path": "verification/recorded-runtime-r1/invoice-demo-output.log",
+      "sha256": "2303b33c513a1880b9b09b958dcf2274fc94d3629cd65735b3b4371dabcb6ec7"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\package-tests-output.log",
+      "path": "verification/recorded-runtime-r1/package-tests-output.log",
+      "sha256": "94650c4d8ca4809bf882d3993a6c279828a099f8b1810231931762b09b4e81db"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261112-new15-xml-retry-2\\verification\\recorded-runtime-r1\\spec.json",
+      "path": "verification/recorded-runtime-r1/spec.json",
+      "sha256": "2e1319540944394bf2d6fff6cb4b2ac6447b7470e1d0d9556d7370d2fa1b2618"
+    }
+  ],
+  "reproduction_readme": "Windows Python 3.13; no container or external runtime service. Network is needed only to obtain source/dependencies. Use the exact frozen product commit linked in snapshot-proof.json, not the source URL in the raw pip freeze editable record. Create a venv, install verification/acceptance-r2/runtime-requirements.txt, then pip install --no-deps -e . from the product root. PYTHONPATH must put the frozen product root before other checkouts. Verify signxml.__file__ points there.\n\nFrom product root, run python -B -m pytest -q -o addopts= -p no:cacheprovider --tb=short verification/acceptance-r2/test_xml_binding.py verification/acceptance-r2/test_xml_references.py verification/acceptance-r2/test_xml_contract.py -k \"not test_duplicate_id_is_rejected[ID]\". This filter excludes two spelling parameters; same-spelling duplicate Id rejection is covered by test/test.py::TestExpectedSignedElement::test_duplicate_ids_are_rejected. Mixed Id/ID retains legacy precedence but cannot authenticate the unsigned shadow. See acceptance-contract-review.json; the stricter initial failure is preserved and excluded from scoring.\n\nRun python -B -m pytest -q -o addopts= -p no:cacheprovider test/test.py::TestExpectedSignedElement, then test/test.py for 75 tests and 169 subtests. The two non-positive certificate serial deprecation warnings belong to legacy fixtures. This is the complete explicitly selected main module, not a claim that every test in every file ran. Run python -B verification/acceptance-r2/xml-demo.py for freshly signed invoices. Generated private keys stay in memory. All command argv, logs, import locations and frozen hashes are retained. The demonstration is a separate verification helper, not a model-authored UI.",
+  "no_model_source_edits": true,
+  "native_trace_included": false
+}
